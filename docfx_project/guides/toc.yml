@@ -1,0 +1,175 @@
+- name: Introduction
+  topicUid: Guides.Introduction
+
+- name: Chart
+  topicUid: Guides.Chart
+  items:
+    - name: Pattern
+      topicUid: Guides.Chart.Pattern
+
+- name: Client
+  topicUid: Guides.Client
+  items:
+    - name: Guild
+      topicUid: Guides.Client.Guild
+      items:
+        - name: Help
+          topicUid: Guides.Client.Guild.Help
+        - name: Ping Milliseconds
+          topicUid: Guides.Client.Guild.PingMs
+        - name: Random
+          topicUid: Guides.Client.Guild.Random
+        - name: Topic
+          topicUid: Guides.Client.Guild.Topic
+
+- name: Image
+  topicUid: Guides.Image
+  items:
+    - name: Memes
+      topicUid: Guides.Image.Memes
+      items:
+      - name: Faceplate
+        topicUid: Guides.Image.Memes.Faceplate
+      - name: Fact
+        topicUid: Guides.Image.Memes.Fact
+      - name: Highway
+        topicUid: Guides.Image.Memes.Highway
+      - name: Jared Selfie
+        topicUid: Guides.Image.Memes.JaredSelfie
+      - name: Squad
+        topicUid: Guides.Image.Memes.Squad
+      - name: Tucker
+        topicUid: Guides.Image.Memes.Tucker
+    - name: Utility
+      topicUid: Guides.Image.Utility
+      items:
+      - name: Brightness
+        topicUid: Guides.Image.Utility.Brightness
+      - name: Contrast
+        topicUid: Guides.Image.Utility.Contrast
+      - name: Resize
+        topicUid: Guides.Image.Utility.Resize
+      - name: Rotate
+        topicUid: Guides.Image.Utility.Rotate
+      - name: Saturate
+        topicUid: Guides.Image.Utility.Saturate
+
+- name: Text
+  topicUid: Guides.Text
+  items:
+  - name: Memes
+    topicUid: Guides.Text.Memes
+    items:
+    - name: Bew
+      topicUid: Guides.Text.Memes.Bew
+    - name: Lean
+      topicUid: Guides.Text.Memes.Lean
+    - name: Pasta
+      topicUid: Guides.Text.Memes.Pasta
+  - name: Utility
+    topicUid: Guides.Text.Utility
+    items:
+    - name: Acronym
+      topicUid: Guides.Text.Utility.Acronym
+    - name: Lowercase
+      topicUid: Guides.Text.Utility.Lowercase
+    - name: Permutation
+      topicUid: Guides.Text.Utility.Permutation
+    - name: Shuffle
+      topicUid: Guides.Text.Utility.Shuffle
+    - name: Uppercase
+      topicUid: Guides.Text.Utility.Uppercase
+
+- name: Miscellaneous
+  topicUid: Guides.Miscellaneous
+  items:
+  - name: Slots
+    topicUid: Guides.Miscellaneous.Slots
+
+- name: Unilang
+  topicUid: Guides.Unilang
+  items:
+    - name: Arpeggiator
+      topicUid: Guides.Unilang.Arpeggiator
+    - name: BPM
+      topicUid: Guides.Unilang.Bpm
+    - name: Chart Event
+      topicUid: Guides.Unilang.ChartEvent
+    - name: Chord
+      topicUid: Guides.Unilang.Chord
+    - name: Code
+      topicUid: Guides.Unilang.Code
+    - name: Force
+      topicUid: Guides.Unilang.Force
+    - name: HOPO
+      topicUid: Guides.Unilang.Hopo
+    - name: Jump Step
+      topicUid: Guides.Unilang.JumpStep
+    - name: Letters
+      topicUid: Guides.Unilang.Letters
+    - name: Load
+      topicUid: Guides.Unilang.Load
+    - name: Mirror
+      topicUid: Guides.Unilang.Mirror
+    - name: Note
+      topicUid: Guides.Unilang.Note
+    - name: "Null"
+      topicUid: Guides.Unilang.Null
+    - name: Pattern
+      topicUid: Guides.Unilang.Pattern
+    - name: Quantization
+      topicUid: Guides.Unilang.Quantization
+    - name: Random
+      topicUid: Guides.Unilang.Random
+    - name: Reflect
+      topicUid: Guides.Unilang.Reflect
+    - name: Repeat
+      topicUid: Guides.Unilang.Repeat
+    - name: Section
+      topicUid: Guides.Unilang.Section
+    - name: Seed
+      topicUid: Guides.Unilang.Seed
+    - name: Set Note Properties
+      topicUid: Guides.Unilang.SetNoteProperties
+    - name: Shift
+      topicUid: Guides.Unilang.Shift
+    - name: Shorthand Chord
+      topicUid: Guides.Unilang.ShorthandChord
+    - name: Shorthand Quantization
+      topicUid: Guides.Unilang.ShorthandQuantization
+    - name: Snap Beat
+      topicUid: Guides.Unilang.SnapBeat
+    - name: Snap Measure
+      topicUid: Guides.Unilang.SnapMeasure
+    - name: Starpower
+      topicUid: Guides.Unilang.Starpower
+    - name: Strum
+      topicUid: Guides.Unilang.Strum
+    - name: Sustain Gap
+      topicUid: Guides.Unilang.SustainGap
+    - name: Swap
+      topicUid: Guides.Unilang.Swap
+    - name: Sweep
+      topicUid: Guides.Unilang.Sweep
+    - name: Tap
+      topicUid: Guides.Unilang.Tap
+    - name: Time Signature
+      topicUid: Guides.Unilang.TimeSignature
+    - name: Track Event
+      topicUid: Guides.Unilang.TrackEvent
+    - name: Unsnap Sustain
+      topicUid: Guides.Unilang.UnsnapSustain
+    - name: Zig Zag
+      topicUid: Guides.Unilang.ZigZag
+
+- name: Utility
+  topicUid: Guides.Utility
+  items:
+    - name: Bpm
+      topicUid: Guides.Utility.Bpm
+    - name: Dice Roll
+      topicUid: Guides.Utility.DiceRoll
+    - name: Heads or Tails
+      topicUid: Guides.Utility.HeadsOrTails
+    - name: Nps
+      topicUid: Guides.Utility.Nps
