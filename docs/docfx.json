@@ -28,7 +28,9 @@
     "resource": [
       {
         "files": [
-          "images/**"
+          "**.png",
+          "logo.svg",
+          "favicon.ico"
         ]
       }
     ],
