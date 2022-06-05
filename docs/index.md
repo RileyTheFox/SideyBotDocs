@@ -1,5 +1,5 @@
 # Welcome to SideyBot
-This site contains the *official* documentation pages for SideyBot, a Discord bot developed by Sidney600 and RileyTheFox.
+This site contains the *official* documentation pages for SideyBot (*pronounced: Side-e Bot*), a Discord bot developed by Sidney600 and RileyTheFox.
 
 This Discord bot is made specifically with Guitar Hero/Clone Hero in mind.
 
