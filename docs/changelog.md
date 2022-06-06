@@ -9,6 +9,7 @@
 - Fixed curly braces with more than 1 parameter within a Unilang function causing an error.
 - Fixed /random command giving an error if the message it picked was an embed or entirely empty.
 - Fixed an error that could occur when the bot didn't have the right permissions.
+- General internal stability fixes.
 
 # 1.0.0
 - Initial Release
