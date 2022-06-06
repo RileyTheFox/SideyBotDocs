@@ -1,2 +1,5 @@
 - name: Commands
   href: guides/
+
+- name: Changelog
+  href: changelog.md
