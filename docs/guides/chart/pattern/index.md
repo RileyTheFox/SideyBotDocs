@@ -5,7 +5,7 @@ title: Pattern
 
 # Pattern
 ## Overview
-The Pattern command generates an image representation of a Guitar/Clone Hero chart. It uses @Guides.Unilang.Introduction as the language.
+The Pattern command generates an image representation of a Guitar/Clone Hero chart. It uses @Guides.Unilang as the language.
 
 Pattern can extend beyond the traditional 5 frets by using 6-9 or A-Z characters. Drums/GHL visuals are not supported.
 
