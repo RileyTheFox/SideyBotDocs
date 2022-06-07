@@ -1,3 +1,11 @@
+# 1.0.2
+### Bug Fixes
+- Fixed Tucker command not sending result in an embed.
+- Fixed Fact command not sending result in an embed.
+
+### Changes
+- Added a game status to the bot that displays how many servers the bot is currently in.
+
 # 1.0.1
 ### Bug Fixes
 - Fixed Impact font not being found when using /fact command with text.
