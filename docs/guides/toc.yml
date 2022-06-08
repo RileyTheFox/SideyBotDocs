@@ -83,8 +83,12 @@
 - name: Miscellaneous
   topicUid: Guides.Miscellaneous
   items:
+  - name: Bug Report
+    topicUid: Guides.Miscellaneous.BugReport
   - name: Slots
     topicUid: Guides.Miscellaneous.Slots
+  - name: Suggestion
+    topicUid: Guides.Miscellaneous.Suggestion
 
 - name: Unilang
   topicUid: Guides.Unilang
