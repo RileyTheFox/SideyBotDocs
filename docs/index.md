@@ -5,6 +5,9 @@ This Discord bot is made specifically with Guitar Hero/Clone Hero in mind.
 
 The SideyBot Discord Bot and its Documentation are split up into Modules. Each module contains a subset of commands that relate to that module.
 
+## Bot Invite
+You can invite SideyBot to your own Discord server by clicking [here](https://discord.com/api/oauth2/authorize?client_id=614496247428022272&permissions=2147803200&scope=bot%20applications.commands).
+
 ## Module Overview
 ### Chart
 Contains commands that deals with charts. See the @Guides.Chart module.
