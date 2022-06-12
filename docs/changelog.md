@@ -1,3 +1,11 @@
+# 1.1.1
+### Bug Fixes
+- Fixed an exception with Unilang SetNoteProperties function when there was no preceding note.
+- Fixed an exception when an invalid number was provided into the SetNoteProperties function parameter.
+- General internal changes and fixes.
+
+&nbsp;  
+
 # 1.1.0
 ### Changes
 - Added Bug Report command. Use this to submit bug reports to the developers for fixing.
