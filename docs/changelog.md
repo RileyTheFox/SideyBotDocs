@@ -1,3 +1,12 @@
+# 1.1.2
+### Bug Fixes
+- Fixed Heads or Tails command having an extremely high chance of giving head.
+
+### Changes
+- Updated the random command to use Discord's Timestamp Formatting feature.
+
+&nbsp;  
+
 # 1.1.1
 ### Bug Fixes
 - Fixed an exception with Unilang SetNoteProperties function when there was no preceding note.
