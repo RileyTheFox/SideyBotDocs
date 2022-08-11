@@ -1,0 +1,233 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Chord | SideyBot Documentation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Chord | SideyBot Documentation ">
+    <meta name="generator" content="docfx 2.59.3.0">
+    
+    <link rel="shortcut icon" href="../../../favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    
+    <meta property="docfx:rel" content="../../../">
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Guides.Unilang.Chord">
+<h1 id="chord">Chord</h1>
+
+<h3 id="aliases">Aliases</h3>
+<p><code>CHORD</code>, <code>CH</code>, <code>🎶</code></p>
+<h2 id="overview">Overview</h2>
+<p>The Chord function will create a chord. Functionally, this works the exact same as encompassing something with square brackets <code>[]</code>.</p>
+<p>For a shorter way to write 5 fret chords, see the <a class="xref" href="../shorthandchord/index.html">Shorthand Chord</a> function.</p>
+<h2 id="arguments">Arguments</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pattern</td>
+<td>string</td>
+<td>The pattern to create a chord from.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="example-1">Example 1</h4>
+<pre><code class="lang-css">CHORD(345)321
+</code></pre>
+<p>Will create a chord with the notes 3, 4, 5, followed by singular notes of 3, 2, 1</p>
+<img src="example1.png" alt="Chord Example 1" style="width:245px;">
+<h2 id="square-brackets">Square Brackets</h2>
+<p>The Chord function is the internal Unilang function for notes wrapped in square brackets <code>[]</code>.</p>
+<h4 id="example-2">Example 2</h4>
+<pre><code class="lang-css">[1234]135[2345]432[12]
+</code></pre>
+<p>An example showing usage of square brackets for chords instead of CHORD.</p>
+<img src="example2.png" alt="Chord Example 2" style="width:245px;">
+<h2 id="functions-within-chords">Functions Within Chords</h2>
+<p>As the Chord function is a function, other functions can be put inside of chords.</p>
+<h4 id="example-3">Example 3</h4>
+<pre><code class="lang-css">[SW(1,5)]54321
+</code></pre>
+<p>Example showing function behaviour within chords. Namely the <a class="xref" href="../sweep/index.html">Sweep</a> function from 1 to 5 within a chord.</p>
+<img src="example3.png" alt="Chord Example 3" style="width:245px;">
+<h2 id="note-values-above-5">Note Values Above 5</h2>
+<p>As with notes, chords also allow note values above 5.</p>
+<h4 id="example-4">Example 4</h4>
+<pre><code class="lang-css">[1234567][345]
+</code></pre>
+<p>Example showing chords allowing values above 5.</p>
+<img src="example4.png" alt="Chord Example 4" style="width:343px;">
+<div class="TIP">
+<h5>Tip</h5>
+<p>In SideyBot, note values are capped at 50. To write a note with higher values than 9, use <code>a-z</code> or <code>'10'</code> numbers in single quotes <code>'</code>.
+See more at <a class="xref" href="../note/index.html">Note</a></p>
+</div>
+<h2 id="note-properties">Note Properties</h2>
+<p>Chords can have note properties, just like normal notes. See <a class="xref" href="../setnoteproperties/index.html">Set Note Properties</a> for more information.</p>
+<h4 id="example-5">Example 5</h4>
+<pre><code class="lang-css">[12345]{16}
+</code></pre>
+<p>Setting note properties after a chord will set the properties of the entire chord.</p>
+<img src="example5.png" alt="Chord Example 5" style="width:245px;">
+<h4 id="example-6">Example 6</h4>
+<pre><code class="lang-css">[123{16}45]
+</code></pre>
+<p>Setting note properties within a chord will set the properties of the accompanying fret.</p>
+<img src="example6.png" alt="Chord Example 6" style="width:245px;">
+<div class="NOTE">
+<h5>Note</h5>
+<p>If a fret inside already has note properties, the external note properties will not override that fret.</p>
+</div>
+<h4 id="example-7">Example 7</h4>
+<pre><code class="lang-css">[123{16}45]{8}
+</code></pre>
+<p>Setting different note properties internally and externally.</p>
+<img src="example7.png" alt="Chord Example 7" style="width:245px;">
+<h2 id="open-notes">Open Notes</h2>
+<p>Chords can have open notes as a fret, just like in Clone Hero.</p>
+<h4 id="example-8">Example 8</h4>
+<pre><code class="lang-css">[024]12345
+</code></pre>
+<p>An example showing a chord with, Open, Red, Blue frets.</p>
+<img src="example8.png" alt="Chord Example 8" style="width:245px;">
+<h2 id="hopo-and-tap-chords">HOPO and Tap Chords</h2>
+<p>HOPO and Tap rules apply to chords just like they do in Clone Hero.</p>
+<h4 id="example-9">Example 9</h4>
+<pre><code class="lang-css">[12][23][34][45]TAP([12][23][34][45])HOPO([12][23][34][45])
+</code></pre>
+<p>An example showing different types of chords.</p>
+<img src="example9.png" alt="Chord Example 9" style="width:245px;">
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <div class="toggle-mode">
+                <div class="icon">
+                  <i aria-hidden="true">☀</i>
+                </div>
+                <label class="switch">
+                  <input type="checkbox" id="switch-style">
+                  <span class="slider round"></span>
+                </label>
+                <div class="icon">
+                  <i aria-hidden="true">☾</i>
+                </div>
+              </div>
+          
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <h5>In This Article</h5>
+              <div></div>
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <div class="pull-left">
+              SideyBot by Sidney600 and RileyTheFox
+              
+            </div>
+            <div class="toggle-mode pull-right visible-sm visible-xs">
+              <div class="icon">
+                <i aria-hidden="true">☀</i>
+              </div>
+              <label class="switch">
+                <input type="checkbox" id="switch-style-m">
+                <span class="slider round"></span>
+              </label>
+              <div class="icon">
+                <i aria-hidden="true">☾</i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <script type="text/javascript" src="../../../styles/toggle-theme.js"></script>
+      </footer>    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>

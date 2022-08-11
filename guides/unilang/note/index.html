@@ -1,0 +1,231 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Note | SideyBot Documentation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Note | SideyBot Documentation ">
+    <meta name="generator" content="docfx 2.59.3.0">
+    
+    <link rel="shortcut icon" href="../../../favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    
+    <meta property="docfx:rel" content="../../../">
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Guides.Unilang.Note">
+<h1 id="note">Note</h1>
+
+<h3 id="aliases">Aliases</h3>
+<p><code>NOTE</code>, <code>NT</code>, <code>🎵</code>, <code>♩</code></p>
+<h2 id="overview">Overview</h2>
+<p>The Note function is the base note creation function.
+Using numbers 0-9 or lowercase letters a-z, will yield the same result as using the Note function (without Length and Type parameters.)</p>
+<h2 id="arguments">Arguments</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FretValue</td>
+<td>integer</td>
+<td>The fret value of this note.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="fret-value">Fret Value</h2>
+<p>The fret will be defined as follows:</p>
+<table>
+<thead>
+<tr>
+<th>Input</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>any integer value</td>
+<td>The value given</td>
+</tr>
+<tr>
+<td><code>ZGRYBOPLMT</code> or <code>0 - 9</code></td>
+<td>0 - 9 <em>(0 is open note)</em></td>
+</tr>
+<tr>
+<td><code>a - z</code></td>
+<td>10 - 35</td>
+</tr>
+</tbody>
+</table>
+<h2 id="examples">Examples</h2>
+<h4 id="example-1">Example 1</h4>
+<pre><code class="lang-css">NOTE(1)
+</code></pre>
+<p>A note of value 1, being a green note. Using &quot;<code>G</code>&quot; for the fret value also works in the Note function.</p>
+<img src="example1.png" alt="Note Example 1" style="width:245px;">
+<h4 id="example-2">Example 2</h4>
+<pre><code class="lang-css">NOTE(1)NOTE(10)
+</code></pre>
+<p>A note with value 1 followed by a note with value 10. <code>a</code> also works to define value 10.</p>
+<img src="example2.png" alt="Note Example 2" style="width:490px;">
+<h2 id="alternate-ways-of-writing-notes">Alternate Ways of Writing Notes</h2>
+<p>Writing a <code>NOTE</code> function for every note becomes cumbersome and tedious, therefore, Unilang will interpret numbers 0-9 and letters a-z as notes with values 0-35.
+If you want notes above 35 for some reason, you can use the NOTE function, or surround any integer value with single quotes <code>'</code> to achieve this.</p>
+<h4 id="example-3">Example 3</h4>
+<pre><code class="lang-css">123456789abc
+</code></pre>
+<p>Using numbers and letters to write notes.</p>
+<img src="example3.png" alt="Note Example 3" style="width:588px;">
+<h4 id="example-4">Example 4</h4>
+<pre><code class="lang-css">1111'10''10''10''10'
+</code></pre>
+<p>Using quotes to write note values above 9.</p>
+<img src="example4.png" alt="Note Example 4" style="width:490px;">
+<h2 id="chords">Chords</h2>
+<p>You can use the CHORD function or wrap notes within square brackets <code>[]</code> to create chords.
+See <a class="xref" href="../chord/index.html">Chord</a> for more information about chords.</p>
+<h4 id="example-5">Example 5</h4>
+<pre><code class="lang-css">[345]3210
+</code></pre>
+<p>Will create a chord with the notes 3, 4, 5, followed by singular notes of 3, 2, 1 then an open note.</p>
+<img src="example5.png" alt="Note Example 5" style="width:245px;">
+<h2 id="note-properties">Note Properties</h2>
+<p>You can also use curly braces <code>{}</code> or the <code>SET_NOTE_PROPERTIES</code> function after any note to set the length and type of that note.
+See <a class="xref" href="../setnoteproperties/index.html">Set Note Properties</a> for more information about setting note properties.</p>
+<h4 id="example-6">Example 6</h4>
+<pre><code class="lang-css">3{8}
+</code></pre>
+<p>Setting the length of a yellow note to 8 steps using curly braces.</p>
+<img src="example1snp.png" alt="Note Example 6" style="width:245px;">
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <div class="toggle-mode">
+                <div class="icon">
+                  <i aria-hidden="true">☀</i>
+                </div>
+                <label class="switch">
+                  <input type="checkbox" id="switch-style">
+                  <span class="slider round"></span>
+                </label>
+                <div class="icon">
+                  <i aria-hidden="true">☾</i>
+                </div>
+              </div>
+          
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <h5>In This Article</h5>
+              <div></div>
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <div class="pull-left">
+              SideyBot by Sidney600 and RileyTheFox
+              
+            </div>
+            <div class="toggle-mode pull-right visible-sm visible-xs">
+              <div class="icon">
+                <i aria-hidden="true">☀</i>
+              </div>
+              <label class="switch">
+                <input type="checkbox" id="switch-style-m">
+                <span class="slider round"></span>
+              </label>
+              <div class="icon">
+                <i aria-hidden="true">☾</i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <script type="text/javascript" src="../../../styles/toggle-theme.js"></script>
+      </footer>    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>

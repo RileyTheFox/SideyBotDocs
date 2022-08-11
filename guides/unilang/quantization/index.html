@@ -1,0 +1,230 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Quantization | SideyBot Documentation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Quantization | SideyBot Documentation ">
+    <meta name="generator" content="docfx 2.59.3.0">
+    
+    <link rel="shortcut icon" href="../../../favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    
+    <meta property="docfx:rel" content="../../../">
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Guides.Unilang.Quantization">
+<h1 id="quantization">Quantization</h1>
+
+<h3 id="aliases">Aliases</h3>
+<p><code>QUANTIZATION</code>, <code>STEP</code>, <code>QUANT</code> <code>Q</code></p>
+<h2 id="overview">Overview</h2>
+<p>The Quantization function will set the quantization, or step of the parser at this point. A value of 16 means 1/16th step.
+This function is functionally identical to using <code>|</code> for quantization. Ex. <code>|16|</code> means the same as <code>QUANTIZATION(16)</code>.</p>
+<p>For a shorter way to write basic quantizations, see the <a class="xref" href="../shorthandquantization/index.html">Shorthand Quantization</a> function.</p>
+<h2 id="arguments">Arguments</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Value</td>
+<td>integer</td>
+<td>The value of the quantization as <code>1/value</code>.</td>
+</tr>
+<tr>
+<td>SnapMode <em>(optional)</em></td>
+<td>string</td>
+<td>Defines the SnapMode for this quantization. Default is FORWARDS.</td>
+</tr>
+</tbody>
+</table>
+<p>Allowed snapmodes are NONE, FORWARDS, BACKWARDS.
+See Examples 3a, 3b and 3c for the differences.</p>
+<h4 id="example-1">Example 1</h4>
+<pre><code class="lang-css">1234QUANT(8)5432
+</code></pre>
+<p>Sets the quantization to 1/8th after the blue note.</p>
+<img src="example1.png" alt="Quantization Example 1" style="width:245px;">
+<h4 id="example-2">Example 2</h4>
+<pre><code class="lang-css">1234|8|5432
+</code></pre>
+<p>Yields the same result as Example 1, but using the <code>|</code> bar notation.</p>
+<img src="example1.png" alt="Quantization Example 2" style="width:245px;">
+<h2 id="snap-mode">Snap Mode</h2>
+<p>The second parameter of Quantization function defines what way quantization snapping should be handled.</p>
+<p>It has three modes:</p>
+<table>
+<thead>
+<tr>
+<th>Mode</th>
+<th>Behaviour</th>
+<th>Bar Notation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>FORWARDS</code></td>
+<td>Snaps to the next closest multiple unless it is already on that multiple.</td>
+<td><code>|16|</code> - No Extra character</td>
+</tr>
+<tr>
+<td><code>BACKWARDS</code></td>
+<td>Snaps to the closest position after the previous note.</td>
+<td><code>|16:|</code> - Colon</td>
+</tr>
+<tr>
+<td><code>NONE</code></td>
+<td>No snapping, it just sets the quantization and. This can create offset notes.</td>
+<td><code>|16!|</code> - Exclamation Mark</td>
+</tr>
+</tbody>
+</table>
+<p><code>QUANT(16, NONE)</code> is the same as <code>|16!|</code>.</p>
+<h4 id="example-3a">Example 3a</h4>
+<pre><code class="lang-css">123|12|123
+</code></pre>
+<p><code>FORWARDS</code> snapping.</p>
+<img src="example3a.png" alt="Quantization Example 3a" style="width:245px;">
+<h4 id="example-3b">Example 3b</h4>
+<pre><code class="lang-css">123|12:|123
+</code></pre>
+<p><code>BACKWARDS</code> snapping.</p>
+<img src="example3b.png" alt="Quantization Example 3b" style="width:245px;">
+<h4 id="example-3c">Example 3c</h4>
+<pre><code class="lang-css">123|12!|123
+</code></pre>
+<p><code>NONE</code> snapping.</p>
+<img src="example3c.png" alt="Quantization Example 3c" style="width:245px;">
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <div class="toggle-mode">
+                <div class="icon">
+                  <i aria-hidden="true">☀</i>
+                </div>
+                <label class="switch">
+                  <input type="checkbox" id="switch-style">
+                  <span class="slider round"></span>
+                </label>
+                <div class="icon">
+                  <i aria-hidden="true">☾</i>
+                </div>
+              </div>
+          
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <h5>In This Article</h5>
+              <div></div>
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <div class="pull-left">
+              SideyBot by Sidney600 and RileyTheFox
+              
+            </div>
+            <div class="toggle-mode pull-right visible-sm visible-xs">
+              <div class="icon">
+                <i aria-hidden="true">☀</i>
+              </div>
+              <label class="switch">
+                <input type="checkbox" id="switch-style-m">
+                <span class="slider round"></span>
+              </label>
+              <div class="icon">
+                <i aria-hidden="true">☾</i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <script type="text/javascript" src="../../../styles/toggle-theme.js"></script>
+      </footer>    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>

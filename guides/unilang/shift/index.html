@@ -1,0 +1,202 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Shift | SideyBot Documentation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Shift | SideyBot Documentation ">
+    <meta name="generator" content="docfx 2.59.3.0">
+    
+    <link rel="shortcut icon" href="../../../favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    
+    <meta property="docfx:rel" content="../../../">
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Guides.Unilang.Shift">
+<h1 id="shift">Shift</h1>
+
+<h3 id="aliases">Aliases</h3>
+<p><code>SHIFT</code>, <code>C</code></p>
+<h2 id="overview">Overview</h2>
+<p>The shift function will shift the notes over by the specified amount, and will clamp the notes within the given max and min note.</p>
+<h2 id="arguments">Arguments</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pattern</td>
+<td>string</td>
+<td>The pattern to shift.</td>
+</tr>
+<tr>
+<td>Amount</td>
+<td>integer</td>
+<td>The amount to shift the pattern.</td>
+</tr>
+<tr>
+<td>MaxNote <em>(optional)</em></td>
+<td>integer</td>
+<td>The maximum note to clamp the shift to. Default is 5.</td>
+</tr>
+<tr>
+<td>MinNote <em>(optional)</em></td>
+<td>integer</td>
+<td>The minimum note to clamp the shift to. Default is 1.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="example-1">Example 1</h4>
+<pre><code class="lang-css">SHIFT(1234, 2)
+</code></pre>
+<p>Shifts the four notes over by 2 places, making it the same as 3456.</p>
+<img src="example1.png" alt="Shift Example 1" style="width:294px;">
+<h2 id="max-and-min-notes">Max and Min Notes</h2>
+<p>Using the MaxNote and MaxNote arguments you can effectively shift the notes and clamp the notes within an area.</p>
+<h4 id="example-2">Example 2</h4>
+<pre><code class="lang-css">SHIFT(12345, 2, 5)
+</code></pre>
+<p>Shifts the five notes over by 2 and clamps them between the maxnote 5 and (default) 1.</p>
+<img src="example2.png" alt="Shift Example 2" style="width:245px;">
+<h2 id="what-about-chords">What About Chords?</h2>
+<p>Chords will also shift over and be clamped. However, they will attempt to keep the amount of frets they had when possible.</p>
+<h4 id="example-3">Example 3</h4>
+<pre><code class="lang-css">SHIFT([235]123[15]543[12345], 2, 5)
+</code></pre>
+<p>Shifts the input over by 2 and clamps them between the maxnote 5 and (default) 1.</p>
+<img src="example3.png" alt="Shift Example 3" style="width:245px;">
+<p>As you can see, the chord with notes 2, 3, 5 was moved over to become 3, 4, 5. It kept the amount of frets it had.</p>
+<p>The 1, 5 chord was squished upwards to become 3, 5, and the 5 note chord retained it's fret count.</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <div class="toggle-mode">
+                <div class="icon">
+                  <i aria-hidden="true">☀</i>
+                </div>
+                <label class="switch">
+                  <input type="checkbox" id="switch-style">
+                  <span class="slider round"></span>
+                </label>
+                <div class="icon">
+                  <i aria-hidden="true">☾</i>
+                </div>
+              </div>
+          
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <h5>In This Article</h5>
+              <div></div>
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <div class="pull-left">
+              SideyBot by Sidney600 and RileyTheFox
+              
+            </div>
+            <div class="toggle-mode pull-right visible-sm visible-xs">
+              <div class="icon">
+                <i aria-hidden="true">☀</i>
+              </div>
+              <label class="switch">
+                <input type="checkbox" id="switch-style-m">
+                <span class="slider round"></span>
+              </label>
+              <div class="icon">
+                <i aria-hidden="true">☾</i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <script type="text/javascript" src="../../../styles/toggle-theme.js"></script>
+      </footer>    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>

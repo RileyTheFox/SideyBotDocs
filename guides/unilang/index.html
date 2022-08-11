@@ -1,0 +1,348 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Unilang | SideyBot Documentation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Unilang | SideyBot Documentation ">
+    <meta name="generator" content="docfx 2.59.3.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Guides.Unilang">
+<h1 id="unilang">Unilang</h1>
+
+<p>Unilang is a scripting language made for Unison. The syntax of this language is quite unique as it is meant for charting.</p>
+<h1 id="basics">Basics</h1>
+<p>Unilang is interpreted from left to right. The language contains short ways to write notes, chords, quantizations and sustains.</p>
+<h2 id="notes">Notes</h2>
+<p>Placing notes is as simple as using numbers and lowercase letters. The input character represents what fret value the note will have.</p>
+<table>
+<thead>
+<tr>
+<th>Note Value</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>Open note</td>
+</tr>
+<tr>
+<td>1 - 5</td>
+<td>Green to orange</td>
+</tr>
+<tr>
+<td>6 - 9</td>
+<td>Extended values above orange</td>
+</tr>
+<tr>
+<td>a - z</td>
+<td>Extended values above the 9th note</td>
+</tr>
+</tbody>
+</table>
+<div class="TIP">
+<h5>Tip</h5>
+<p>You can use single quotes <code>'</code> around a note to write the value too instead of using a-z. Ex. <code>'10'</code> will place note of value 10.</p>
+</div>
+<h4 id="example-1">Example 1</h4>
+<pre><code class="lang-css">123454321
+</code></pre>
+<p>Writing numbers like this in a row will results in each one being treated as a note.</p>
+<p>You may notice that, notes become HOPOs after the first note. The reason for this is that the default quantization is set to 1/16.</p>
+<p>For more about quantizations, see the Quantization section and <a class="xref" href="quantization/index.html">Quantization</a> for more.</p>
+<img src="example1.png" alt="Unilang Example 1" style="width:245px;">
+<p>For more about note placing, see <a class="xref" href="note/index.html">Note</a></p>
+<h2 id="quantization">Quantization</h2>
+<p>Quantization, or the step, can be set by wrapping a number in <code>|</code> bars. The default quantization is 1/16. See <a class="xref" href="quantization/index.html">Quantization</a> for more.</p>
+<h4 id="example-2">Example 2</h4>
+<pre><code class="lang-css">1234|12|234|8|34|12|123
+</code></pre>
+<p>Using different quantizations.</p>
+<img src="example2.png" alt="Unilang Example 2" style="width:245px;">
+<h2 id="chords">Chords</h2>
+<p>Placing chords can be achieved by wrapping something in square brackets <code>[]</code>. See <a class="xref" href="chord/index.html">Chord</a> for more about chords.</p>
+<h4 id="example-3">Example 3</h4>
+<pre><code class="lang-css">|8|[345][234][123]
+</code></pre>
+<p>Wrapping something in square brackets will create chords. In this case 3, three note chords.</p>
+<img src="example3.png" alt="Unilang Example 3" style="width:245px;">
+<h2 id="sustains-and-note-properties">Sustains and Note Properties</h2>
+<p>You can set the sustain length and other note properties by putting curly brackets <code>{}</code> after any note.</p>
+<h4 id="example-4">Example 4</h4>
+<pre><code class="lang-css">1234{5}5{4,t}
+</code></pre>
+<p>Creates 4 notes where the blue note will have a sustain length of 5 steps, and the orange note a length of 4 and being a tap.</p>
+<img src="example4.png" alt="Unilang Example 4" style="width:245px;">
+<h1 id="functions">Functions</h1>
+<p>Unilang comes with a bunch of quality of life functions for writing shorter and more readable Unilang code.</p>
+<p>Functions always start with a CAPITAL letter. Check the different function pages for other aliases of the functions. After the first letter, functions are case insensitive.</p>
+<p>As an example, that means that the ARPEGGIATOR function can be written as ARPEGGIATOR, Arpeggiator, ArPeGgIaToR, or any other alternative capitalization as long as the first letter is a CAPITAL letter.</p>
+<h4 id="example-5">Example 5</h4>
+<pre><code class="lang-css">ARP(1254, 4)
+</code></pre>
+<p>Will arpeggiate the pattern &quot;1254&quot; a total of 4 times.</p>
+<img src="example1arp.png" alt="Unilang Example 5" style="width:245px;">
+<p>For more about what the different functions do, check the different pages within this category.</p>
+<h2 id="short-hands-for-functions">Short-hands For Functions</h2>
+<p>In Unilang, at the base level, everything is treated as a function. That means that, yes, a note is a function, a quantization is a function, a chord is a function and so on.</p>
+<p>In the examples you may have already seen the short-hand versions of some of these functions.</p>
+<h3 id="some-concrete-function-vs-short-hands">Some Concrete Function vs. Short-hands</h3>
+<table>
+<thead>
+<tr>
+<th>Function Equivalent</th>
+<th>Shorthand</th>
+<th>See more</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>NOTE(1)</code></td>
+<td><code>1</code></td>
+<td><a class="xref" href="note/index.html">Note</a></td>
+</tr>
+<tr>
+<td><code>QUANTIZATION(16)</code></td>
+<td><code>|16|</code></td>
+<td><a class="xref" href="quantization/index.html">Quantization</a></td>
+</tr>
+<tr>
+<td><code>QUANTIZATION(16, none)</code></td>
+<td><code>|16!|</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>QUANTIZATION(16, backwards)</code></td>
+<td><code>|16:|</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>CHORD(123)</code></td>
+<td><code>[123]</code></td>
+<td><a class="xref" href="chord/index.html">Chord</a></td>
+</tr>
+<tr>
+<td><code>NOTE(1)SETPROP(8)</code></td>
+<td><code>1{8}</code></td>
+<td><a class="xref" href="setnoteproperties/index.html">Set Note Properties</a></td>
+</tr>
+<tr>
+<td><code>NOTE(1)SETPROP(8)UNSNAP_SUS()</code></td>
+<td><code>1{8}^</code></td>
+<td><a class="xref" href="unsnapsustain/index.html">Unsnap Sustain</a></td>
+</tr>
+<tr>
+<td><code>SHORTHAND_CHORD(a)</code></td>
+<td><code>.a</code></td>
+<td><a class="xref" href="shorthandchord/index.html">Shorthand Chord</a></td>
+</tr>
+<tr>
+<td><code>SHORTQUANT(1)</code></td>
+<td><code>;1</code></td>
+<td><a class="xref" href="shorthandquantization/index.html">Shorthand Quantization</a></td>
+</tr>
+<tr>
+<td><code>SHORTQUANT(1, none)</code></td>
+<td><code>;1!</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>SHORTQUANT(1, backwards)</code></td>
+<td><code>;1:</code></td>
+<td></td>
+</tr>
+<tr>
+<td><code>NOTE(1)JUMP_STEP()NOTE(2)</code></td>
+<td><code>1-2</code></td>
+<td><a class="xref" href="jumpstep/index.html">Jump Step</a></td>
+</tr>
+<tr>
+<td><code>NOTE(1)SNAP_BEAT()NOTE(2)</code></td>
+<td><code>1=2</code></td>
+<td><a class="xref" href="snapbeat/index.html">Snap Beat</a></td>
+</tr>
+<tr>
+<td><code>RANDOM()</code></td>
+<td><code>?</code></td>
+<td><a class="xref" href="random/index.html">Random</a></td>
+</tr>
+</tbody>
+</table>
+<p>Other functions do not have short-hands, which means you will have to specify them by name.</p>
+<p>Some notable functions you might find useful right away are listed below.</p>
+<table>
+<thead>
+<tr>
+<th>Function Equivalent</th>
+<th>Description</th>
+<th>See more</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ARP(1234,4)</code></td>
+<td>Arpeggiates the pattern the given amount of times.</td>
+<td><a class="xref" href="arpeggiator/index.html">Arpeggiator</a></td>
+</tr>
+<tr>
+<td><code>FORCE(1234)</code></td>
+<td>Forces all the notes in the input pattern.</td>
+<td><a class="xref" href="force/index.html">Force</a></td>
+</tr>
+<tr>
+<td><code>HOPO(1234)</code></td>
+<td>Turns the input pattern into HOPO notes.</td>
+<td><a class="xref" href="hopo/index.html">HOPO</a></td>
+</tr>
+<tr>
+<td><code>STRUM(1234)</code></td>
+<td>Turns the input pattern into Strum notes.</td>
+<td><a class="xref" href="strum/index.html">Strum</a></td>
+</tr>
+<tr>
+<td><code>TAP(1234)</code></td>
+<td>Turns the input pattern into Tap notes.</td>
+<td><a class="xref" href="tap/index.html">Tap</a></td>
+</tr>
+<tr>
+<td><code>STARPOWER(1234)</code></td>
+<td>Turns the input pattern into Starpower notes.</td>
+<td><a class="xref" href="starpower/index.html">Starpower</a></td>
+</tr>
+</tbody>
+</table>
+<p>For other functions, please refer to their respective pages for more information.</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <div class="toggle-mode">
+                <div class="icon">
+                  <i aria-hidden="true">☀</i>
+                </div>
+                <label class="switch">
+                  <input type="checkbox" id="switch-style">
+                  <span class="slider round"></span>
+                </label>
+                <div class="icon">
+                  <i aria-hidden="true">☾</i>
+                </div>
+              </div>
+          
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <h5>In This Article</h5>
+              <div></div>
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <div class="pull-left">
+              SideyBot by Sidney600 and RileyTheFox
+              
+            </div>
+            <div class="toggle-mode pull-right visible-sm visible-xs">
+              <div class="icon">
+                <i aria-hidden="true">☀</i>
+              </div>
+              <label class="switch">
+                <input type="checkbox" id="switch-style-m">
+                <span class="slider round"></span>
+              </label>
+              <div class="icon">
+                <i aria-hidden="true">☾</i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <script type="text/javascript" src="../../styles/toggle-theme.js"></script>
+      </footer>    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

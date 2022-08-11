@@ -1,0 +1,298 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Shorthand Quantization | SideyBot Documentation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Shorthand Quantization | SideyBot Documentation ">
+    <meta name="generator" content="docfx 2.59.3.0">
+    
+    <link rel="shortcut icon" href="../../../favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    
+    <meta property="docfx:rel" content="../../../">
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Guides.Unilang.ShorthandQuantization">
+<h1 id="shorthand-quantization">Shorthand Quantization</h1>
+
+<h3 id="aliases">Aliases</h3>
+<p><code>SHORTHAND_QUANTIZATION</code>, <code>SHORTQUANT</code>, <code>SQ</code></p>
+<h2 id="overview">Overview</h2>
+<p>The Shorthand Quantization function takes a letter as input and turns it into a quantization.</p>
+<p>This function is functionally identical to using <code>;</code> followed by a character.
+This function is quite handy if you need to write shorter Unilang code.</p>
+<h2 id="arguments">Arguments</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ShortQuantLetter</td>
+<td>string</td>
+<td>The shorthand quantization letter.</td>
+</tr>
+<tr>
+<td>ShouldSnap <em>(optional)</em></td>
+<td>boolean</td>
+<td>Should the quantization snap to the nearest multiple of the value. Default is <code>true</code>.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="list-of-quantizations">List of Quantizations</h2>
+<p>Here is a list of what letters map to each quantization. The letters are grouped in multiples.</p>
+<table>
+<thead>
+<tr>
+<th>Multiple of 2</th>
+<th>Multiple of 3</th>
+<th>Multiple of 5</th>
+<th>Multiple of 7</th>
+<th>Multiple of 9</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>1</code> -&gt; 1/1</td>
+<td><code>a</code> -&gt; 1/3</td>
+<td><code>A</code> -&gt; 1/5</td>
+<td><code>j</code> -&gt; 1/7</td>
+<td><code>I</code> -&gt; 1/9</td>
+</tr>
+<tr>
+<td><code>2</code> -&gt; 1/2</td>
+<td><code>b</code> -&gt; 1/6</td>
+<td><code>B</code> -&gt; 1/10</td>
+<td><code>k</code> -&gt; 1/14</td>
+<td><code>J</code> -&gt; 1/18</td>
+</tr>
+<tr>
+<td><code>3</code> -&gt; 1/4</td>
+<td><code>c</code> -&gt; 1/12</td>
+<td><code>C</code> -&gt; 1/20</td>
+<td><code>l</code> -&gt; 1/28</td>
+<td><code>K</code> -&gt; 1/36</td>
+</tr>
+<tr>
+<td><code>4</code> -&gt; 1/8</td>
+<td><code>d</code> -&gt; 1/24</td>
+<td><code>D</code> -&gt; 1/40</td>
+<td><code>m</code> -&gt; 1/56</td>
+<td><code>L</code> -&gt; 1/72</td>
+</tr>
+<tr>
+<td><code>5</code> -&gt; 1/16</td>
+<td><code>e</code> -&gt; 1/48</td>
+<td><code>E</code> -&gt; 1/80</td>
+<td><code>n</code> -&gt; 1/112</td>
+<td><code>M</code> -&gt; 1/144</td>
+</tr>
+<tr>
+<td><code>6</code> -&gt; 1/32</td>
+<td><code>f</code> -&gt; 1/96</td>
+<td><code>F</code> -&gt; 1/160</td>
+<td><code>o</code> -&gt; 1/224</td>
+<td><code>N</code> -&gt; 1/288</td>
+</tr>
+<tr>
+<td><code>7</code> -&gt; 1/64</td>
+<td><code>g</code> -&gt; 1/192</td>
+<td><code>G</code> -&gt; 1/320</td>
+<td><code>p</code> -&gt; 1/448</td>
+<td><code>O</code> -&gt; 1/576</td>
+</tr>
+<tr>
+<td><code>8</code> -&gt; 1/128</td>
+<td><code>h</code> -&gt; 1/384</td>
+<td><code>H</code> -&gt; 1/640</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>9</code> -&gt; 1/256</td>
+<td><code>i</code> -&gt; 1/768</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>0</code> -&gt; 1/512</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="example-1">Example 1</h4>
+<pre><code class="lang-css">SQ(6)ARP(1234,4)
+</code></pre>
+<p>Places the shorthand quantization corresponding to the character <code>6</code>, meaning 1/32, followed by 16 notes.</p>
+<img src="example1.png" alt="Shorthand Quantization Example 1" style="width:245px;">
+<h2 id="using-semicolon--characters">Using Semicolon ; Characters</h2>
+<p>You can write <code>;</code> followed by one of the quantization letters above to achieve the same as <code>SHORTHAND_QUANTIZATION()</code>.</p>
+<h4 id="example-2">Example 2</h4>
+<pre><code class="lang-css">;dARP(321,4)
+</code></pre>
+<p>Places the shorthand quantization corresponding to the character <code>d</code>, meaning 1/24, followed by 12 notes.</p>
+<img src="example2.png" alt="Shorthand Quantization Example 2" style="width:245px;">
+<h2 id="snap-mode">Snap Mode</h2>
+<p>As with the Quantization function you can specify the snapping mode. See the <a class="xref" href="../quantization/index.html">Quantization</a> function for more information about snapping mode.</p>
+<table>
+<thead>
+<tr>
+<th>Mode</th>
+<th>Shorthand Notation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>FORWARDS</code></td>
+<td><code>;a</code> - No Extra character</td>
+</tr>
+<tr>
+<td><code>BACKWARDS</code></td>
+<td><code>;a:</code> - Colon</td>
+</tr>
+<tr>
+<td><code>NONE</code></td>
+<td><code>;a!</code> - Exclamation Mark</td>
+</tr>
+</tbody>
+</table>
+<div class="TIP">
+<h5>Tip</h5>
+<p>Any quantization (within the listed quantizations) is shorter to write using <code>;</code> notation. However, using it does come at the cost of readability.</p>
+</div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <div class="toggle-mode">
+                <div class="icon">
+                  <i aria-hidden="true">☀</i>
+                </div>
+                <label class="switch">
+                  <input type="checkbox" id="switch-style">
+                  <span class="slider round"></span>
+                </label>
+                <div class="icon">
+                  <i aria-hidden="true">☾</i>
+                </div>
+              </div>
+          
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <h5>In This Article</h5>
+              <div></div>
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <div class="pull-left">
+              SideyBot by Sidney600 and RileyTheFox
+              
+            </div>
+            <div class="toggle-mode pull-right visible-sm visible-xs">
+              <div class="icon">
+                <i aria-hidden="true">☀</i>
+              </div>
+              <label class="switch">
+                <input type="checkbox" id="switch-style-m">
+                <span class="slider round"></span>
+              </label>
+              <div class="icon">
+                <i aria-hidden="true">☾</i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <script type="text/javascript" src="../../../styles/toggle-theme.js"></script>
+      </footer>    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>

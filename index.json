@@ -1,0 +1,417 @@
+{
+  "api/index.html": {
+    "href": "api/index.html",
+    "title": "PLACEHOLDER | SideyBot Documentation",
+    "keywords": "PLACEHOLDER TODO: Add .NET projects to the src folder and run docfx to generate REAL API Documentation !"
+  },
+  "changelog.html": {
+    "href": "changelog.html",
+    "title": "1.1.2 | SideyBot Documentation",
+    "keywords": "1.1.2 Bug Fixes Fixed Heads or Tails command having an extremely high chance of giving head. Changes Updated the random command to use Discord's Timestamp Formatting feature. 1.1.1 Bug Fixes Fixed an exception with Unilang SetNoteProperties function when there was no preceding note. Fixed an exception when an invalid number was provided into the SetNoteProperties function parameter. General internal changes and fixes. 1.1.0 Changes Added Bug Report command. Use this to submit bug reports to the developers for fixing. Added Suggestions command. Use this to suggest any new features or changes you want to see in SideyBot. 1.0.2 Bug Fixes Fixed Tucker command not sending result in an embed. Fixed Fact command not sending result in an embed. Changes Added a game status to the bot that displays how many servers the bot is currently in. 1.0.1 Bug Fixes Fixed Impact font not being found when using /fact command with text. Fixed /help command giving an error if used on a non-global command. Fixed /saturate command giving an error with amount less than 0. Fixed /brightness command giving an error with amount less than 0. Fixed /contrast command giving an error with amount less than 0. Fixed /resize command giving an error with width and height less than 1. Fixed curly braces with more than 1 parameter within a Unilang function causing an error. Fixed /random command giving an error if the message it picked was an embed or entirely empty. Fixed an error that could occur when the bot didn't have the right permissions. General internal stability fixes. 1.0.0 Initial Release"
+  },
+  "guides/chart/index.html": {
+    "href": "guides/chart/index.html",
+    "title": "Chart | SideyBot Documentation",
+    "keywords": "Chart Overview The Chart module contains commands related to charts and charting."
+  },
+  "guides/chart/pattern/index.html": {
+    "href": "guides/chart/pattern/index.html",
+    "title": "Pattern | SideyBot Documentation",
+    "keywords": "Pattern Overview The Pattern command generates an image representation of a Guitar/Clone Hero chart. It uses Unilang as the language. Pattern can extend beyond the traditional 5 frets by using 6-9 or A-Z characters. Drums/GHL visuals are not supported. Arguments Name Type Options Description Input String N/A The input string to be parsed as Unilang and outputted as a chart. Usage Note Double quotes (\" \") are not required for arguments. They are used here only to show the separation of different arguments. Example 1 /pattern input:\"1234\" Will output a chart with Green, Red, Yellow, Blue. Example 2 /pattern input:\"ARP(1234, 4)\" Will arpeggiate the pattern \"1234\" a total of 4 times."
+  },
+  "guides/client/guild/help/index.html": {
+    "href": "guides/client/guild/help/index.html",
+    "title": "Help | SideyBot Documentation",
+    "keywords": "Help Overview The Help command will turn the given input text into a bew shape. (Bew is the first 4 notes from Xyphos in Soulless 2 by ExileLord). Arguments Name Type Options Description CommandName String N/A The name of the command to get help for. If empty, you will get a list of available commands. Usage Example /help name: acronym This will get the help information for the \"acronym\" command."
+  },
+  "guides/client/guild/index.html": {
+    "href": "guides/client/guild/index.html",
+    "title": "Guild | SideyBot Documentation",
+    "keywords": "Guild Overview The Guild module contains commands related to modifying and getting information about the current guild."
+  },
+  "guides/client/guild/pingms/index.html": {
+    "href": "guides/client/guild/pingms/index.html",
+    "title": "Ping Milliseconds | SideyBot Documentation",
+    "keywords": "Ping Milliseconds Overview The Ping Milliseconds command will get the ping in milleseconds to the gateway. Usage Example /pingms This will return some value in milliseconds."
+  },
+  "guides/client/guild/random/index.html": {
+    "href": "guides/client/guild/random/index.html",
+    "title": "Random | SideyBot Documentation",
+    "keywords": "Random Overview The Random command will get random messages from the given channel. You can also Arguments Name Type Options Description Channel String N/A The name of channel to get random messages from. If left empty it will get messages from the current channel. Count String N/A The amount of messages in a row to get. If empty it will get 1 message. Max is 10. Usage Example /random channel: #some-channel count: 2 This will get 2 random messages (which are in a row), from the channel named #some-channel."
+  },
+  "guides/client/guild/topic/index.html": {
+    "href": "guides/client/guild/topic/index.html",
+    "title": "Topic | SideyBot Documentation",
+    "keywords": "Topic Overview The Topic command will get the topic for the given channel. Arguments Name Type Options Description Channel String N/A The name of channel to get the topic for. If left empty, it will get the topic from the current channel. Usage Example /topic channel: #some-channel This will get the topic from the channel named #some-channel."
+  },
+  "guides/client/index.html": {
+    "href": "guides/client/index.html",
+    "title": "Client | SideyBot Documentation",
+    "keywords": "Client Overview The Client modules contain commands related to modifying and getting information about the bot and client. This includes information about the server and channels and so on."
+  },
+  "guides/image/index.html": {
+    "href": "guides/image/index.html",
+    "title": "Image | SideyBot Documentation",
+    "keywords": "Image Overview The Image modules provide commands for manipulating images. There are two sub-modules which are the Image Memes and Image Utility commands."
+  },
+  "guides/image/memes/faceplate/index.html": {
+    "href": "guides/image/memes/faceplate/index.html",
+    "title": "Faceplate | SideyBot Documentation",
+    "keywords": "Faceplate Overview The Faceplate command will place the supplied image onto the faceplate of a Les Paul guitar. The image will be scaled, and rotated to fit. Arguments Name Type Options Description Url String N/A The URL of the image to put onto the faceplate. Image Attachment N/A An image attachment which will be used to place onto the faceplate. Resize Mode Choice Crop, Stretch Decides how the image will be resized onto the faceplate. Default is 'Crop' Usage Example 1 /faceplate url:\"https://example.com/myimage.png\" Will place the image located at https://example.com/myimage.png onto the faceplate. Example 2 /faceplate image:\"Discord Image Attachment\" Will place the image attached with the command in Discord onto the faceplate. Example 3 /faceplate url:\"https://example.com/myimage.png\" resizemode:\"Crop\" Will crop the image located at https://example.com/myimage.png onto the faceplate. Example Image Example Result 1 /faceplate resizemode: Crop Using the command with this image and Resize Mode Crop will produce the result below: Example Result 2 /faceplate resizemode: Stretch Using the command with this image and Resize Mode Stretch will produce the result below:"
+  },
+  "guides/image/memes/fact/index.html": {
+    "href": "guides/image/memes/fact/index.html",
+    "title": "Fact | SideyBot Documentation",
+    "keywords": "Fact Overview The Fact command will place the given image or text into a screen with Schmooey saying \"and that's a fact\" to it. Arguments Name Type Options Description Text String N/A The text to place in Schmooey's screen. Url String N/A The URL of the image to put onto Schmooey's screen. Image Attachment N/A An image attachment which will be used to place onto Schmooey's screen. Usage Example 1 /fact url:\"https://example.com/myimage.png\" Will place the image located at https://example.com/myimage.png in Schmooey's screen. Example 2 /fact image:\"Discord Image Attachment\" Will place the image attached with the command in Discord in Schmooey's screen. Example 3 /fact text:\"Hello everyone, this is some example text!\" Will place the text \"Hello everyone, this is some example text!\" in Schmooey's screen. Example Image Example Result /fact Using the command with this image will produce the result below: Example Result /fact text: Hello everyone, this is some example text! Using the command with this text will produce the result below:"
+  },
+  "guides/image/memes/highway/index.html": {
+    "href": "guides/image/memes/highway/index.html",
+    "title": "Highway | SideyBot Documentation",
+    "keywords": "Highway Overview The Highway command will resize the supplied image into the dimensions (512x1024) of a Clone Hero Highway image. Arguments Name Type Options Description Url String N/A The URL of the image to make into a highway. Image Attachment N/A An image attachment which will be used to make into a highway. Usage Example 1 /highway url:\"https://example.com/myimage.png\" Will turn the image located at https://example.com/myimage.png into a highway. Example 2 /highway image:\"Discord Image Attachment\" Will turn the image attached with the command in Discord into a highway. Example Image Example Result /highway Using the command with this image will produce the result below:"
+  },
+  "guides/image/memes/index.html": {
+    "href": "guides/image/memes/index.html",
+    "title": "Image Memes | SideyBot Documentation",
+    "keywords": "Image Memes Overview The Image Memes module contains commands for creating Clone Hero related memes."
+  },
+  "guides/image/memes/jaredselfie/index.html": {
+    "href": "guides/image/memes/jaredselfie/index.html",
+    "title": "Jared Selfie | SideyBot Documentation",
+    "keywords": "Jared Selfie Overview The JaredSelfie command will place the supplied image into the background of CarnyJared's selfie. The Jared overlay will be scaled to fit the background proportionally. Arguments Name Type Options Description Url String N/A The URL of the image to put into the background. Image Attachment N/A An image attachment which will be used to place into the background. Side Choice Left, Right Choose to place the Jared overlay on the left or right side of the image. Usage Example 1 /jaredselfie url:\"https://example.com/myimage.png\" Will place the image located at https://example.com/myimage.png into the background. Example 2 /jaredselfie image:\"Discord Image Attachment\" Will place the image attached with the command in Discord into the background. Example 3 /jaredselfie url:\"https://example.com/myimage.png\" side:\"Right\" Will place the image located at https://example.com/myimage.png into the background and Jared positioned on the right side. Example Image Example Result 1 /jaredselfie side: Left Using the command with this image and side set to Left will produce the result below: Example Result 2 /jaredselfie side: Right Using the command with this image and side set to Right will produce the result below:"
+  },
+  "guides/image/memes/squad/index.html": {
+    "href": "guides/image/memes/squad/index.html",
+    "title": "Squad | SideyBot Documentation",
+    "keywords": "Squad Overview The Squad command will place the supplied image into the background of the squad (Alec, Will, Drew). The squad overlay will be scaled to fit the background proportionally. Arguments Name Type Options Description Url String N/A The URL of the image to put into the background. Image Attachment N/A An image attachment which will be used to place into the background. Side Choice Left, Right Choose to place the Squad overlay on the left or right side of the image. Usage Example 1 /squad url:\"https://example.com/myimage.png\" Will place the image located at https://example.com/myimage.png into the background. Example 2 /squad image:\"Discord Image Attachment\" Will place the image attached with the command in Discord into the background. Example 3 /squad url:\"https://example.com/myimage.png\" side:\"Right\" Will place the image located at https://example.com/myimage.png into the background and the Squad positioned on the right side. Example Image Example Result 1 /squad side: Right Using the command with this image and side set to Right will produce the result below: Example Result 2 /squad side: Left Using the command with this image and side set to Left will produce the result below:"
+  },
+  "guides/image/memes/tucker/index.html": {
+    "href": "guides/image/memes/tucker/index.html",
+    "title": "Tucker | SideyBot Documentation",
+    "keywords": "Tucker Overview The Tucker command will place the supplied image into the background of Tucker's reaction. The tucker overlay will be scaled to be 1/5th of the background's height, and will be placed 1/40th away from the edge of the image. Arguments Name Type Options Description Url String N/A The URL of the image to put into the background. Image Attachment N/A An image attachment which will be used to place into the background. Corner Choice Top Left, Top Right, Bottom Left, Bottom Right Choose to place the Squad overlay on the left or right side of the image. Usage Example 1 /tucker url:\"https://example.com/myimage.png\" Will place the image located at https://example.com/myimage.png into the background. Example 2 /tucker image:\"Discord Image Attachment\" Will place the image attached with the command in Discord into the background. Example 3 /tucker url:\"https://example.com/myimage.png\" corner:\"Top Right\" Will place the image located at https://example.com/myimage.png into the background and Tucker positioned in the top right corner. Example Image Example Result /tucker corner: Top Left Using the command with this image and side set to Top Left will produce the result below:"
+  },
+  "guides/image/utility/brightness/index.html": {
+    "href": "guides/image/utility/brightness/index.html",
+    "title": "Brightness | SideyBot Documentation",
+    "keywords": "Brightness Overview The Brightness command will set the brightness of the given image. Arguments Name Type Options Description Amount float N/A How much to set the brightness to. Value less than 1 will darken the image. Url String N/A The URL of the image to brighten. Image Attachment N/A An image attachment which will be used to brighten. Usage Example 1 /brightness amount: 2 url:\"https://example.com/myimage.png\" Will set the brightness of the image located at https://example.com/myimage.png to 2. Example 2 /brightness amount: 2 image:\"Discord Image Attachment\" Will set the brightness of the image attached with the command in Discord to 2. Example Image Example Result 1 /brightness amount: 2 Using the command with brightness value 2, will brighten the image: Example Result 2 /brightness amount: 0.5 Using the command with brightness value 0.5, will darken the image:"
+  },
+  "guides/image/utility/contrast/index.html": {
+    "href": "guides/image/utility/contrast/index.html",
+    "title": "Contrast | SideyBot Documentation",
+    "keywords": "Contrast Overview The Contrast command will set the contrast of the given image. Arguments Name Type Options Description Amount float N/A How much to set the contrast to. Url String N/A The URL of the image to contrast. Image Attachment N/A An image attachment which will be contrasted. Usage Example 1 /contrast amount: 2 url:\"https://example.com/myimage.png\" Will set the contrast of the image located at https://example.com/myimage.png to 2. Example 2 /contrast amount: 2 image:\"Discord Image Attachment\" Will set the contrast of the image attached with the command in Discord to 2. Example Image Example Result 1 /contrast amount: 10 Using the command with contrast value 10: Example Result 2 /contrast amount: 0.25 Using the command with contrast value 0.25:"
+  },
+  "guides/image/utility/index.html": {
+    "href": "guides/image/utility/index.html",
+    "title": "Image Utility | SideyBot Documentation",
+    "keywords": "Image Utility Overview The Image Utility module contains commands for manipulating images, such as resizing, brightness, rotation."
+  },
+  "guides/image/utility/resize/index.html": {
+    "href": "guides/image/utility/resize/index.html",
+    "title": "Resize | SideyBot Documentation",
+    "keywords": "Resize Overview The Resize command will resize the given image to the given width and height. Arguments Name Type Options Description Width Integer N/A The new width of the image. Height Integer N/A The new height of the image. Url String N/A The URL of the image to resize. Image Attachment N/A An image attachment which will be resized. Usage Example 1 /resize width: 1920 height 1080 url:\"https://example.com/myimage.png\" Will resize the image located at https://example.com/myimage.png to 1920x1080. Example 2 /resize width: 1920 height 1080 image:\"Discord Image Attachment\" Will resize the image attached with the command in Discord to 1920x1080. Example Image Example Result /resize width: 100 height: 100 Resizes the image to 100x100"
+  },
+  "guides/image/utility/rotate/rotate.html": {
+    "href": "guides/image/utility/rotate/rotate.html",
+    "title": "Rotate | SideyBot Documentation",
+    "keywords": "Rotate Overview The Rotate command will rotate the given image by the given amount of degrees. Arguments Name Type Options Description Degrees float N/A How much to rotate the image by. Url String N/A The URL of the image to rotate. Image Attachment N/A An image attachment which will be rotate. Usage Example 1 /rotate degrees: 45 url:\"https://example.com/myimage.png\" Will rotate the image located at https://example.com/myimage.png by 45 degrees. Example 2 /rotate degrees: 45 image:\"Discord Image Attachment\" Will rotate the image attached with the command in Discord by 45 degrees. Example Image Example Result 1 /rotate degrees: 90 Using the command with rotation of 90 degrees: Example Result 2 /rotate degrees: 45 Using the command with with rotation of 45 degrees to show that it can also rotate outside of multiples of 90:"
+  },
+  "guides/image/utility/saturate/saturate.html": {
+    "href": "guides/image/utility/saturate/saturate.html",
+    "title": "Saturate | SideyBot Documentation",
+    "keywords": "Saturate Overview The Saturate command will set the saturation of the given image. Arguments Name Type Options Description Amount float N/A How much to set the saturation to. Url String N/A The URL of the image to saturate. Image Attachment N/A An image attachment which will be saturated. Usage Example 1 /saturate amount: 2 url:\"https://example.com/myimage.png\" Will set the saturation of the image located at https://example.com/myimage.png to 2. Example 2 /saturate amount: 2 image:\"Discord Image Attachment\" Will set the saturation of the image attached with the command in Discord to 2. Example Image Example Result 1 /saturate amount: 10 Using the command with saturation value 10: Example Result 2 /saturate amount: 0.25 Using the command with saturation value 0.25:"
+  },
+  "guides/index.html": {
+    "href": "guides/index.html",
+    "title": "Introduction | SideyBot Documentation",
+    "keywords": "Introduction The SideyBot Discord Bot and its Documentation are split up into Modules. Each module contains a subset of commands that relate to that module."
+  },
+  "guides/miscellaneous/bugreport/index.html": {
+    "href": "guides/miscellaneous/bugreport/index.html",
+    "title": "Bug Report | SideyBot Documentation",
+    "keywords": "Bug Report Overview The Bug Report command lets you give the developers a report of a bug. Arguments Name Type Options Description Title String N/A The title for your bug report. Description String N/A The description for your bug report. Usage Example /bugreport title: This thing went wrong! description: I did this thing here, and it went very wrong! This will send the developers a bug report."
+  },
+  "guides/miscellaneous/index.html": {
+    "href": "guides/miscellaneous/index.html",
+    "title": "Miscellaneous | SideyBot Documentation",
+    "keywords": "Miscellaneous Overview The Miscellaneous module contains other commands that don't fit well into any other modules."
+  },
+  "guides/miscellaneous/slots/index.html": {
+    "href": "guides/miscellaneous/slots/index.html",
+    "title": "Slots | SideyBot Documentation",
+    "keywords": "Slots Overview The Slots command will let you play slots. (There is no reward except from a nice green box!). The command will use emojis from the server as the slots. Arguments Name Type Options Description SlotCount Integer N/A How many slots to play. Minimum is 2, Maximum is 10. Usage Example /slots slotCount: 4 This will play slots with 4 slots."
+  },
+  "guides/miscellaneous/suggestion/index.html": {
+    "href": "guides/miscellaneous/suggestion/index.html",
+    "title": "Suggestion | SideyBot Documentation",
+    "keywords": "Suggestion Overview The Suggestion command lets you give the developers a feature or change suggestion. Arguments Name Type Options Description Title String N/A The title for your suggestion. Description String N/A The description for your suggestion. Usage Example /suggestion title: My suggestion description: This is what i suggest is a good suggestion This will send the developers your suggestion."
+  },
+  "guides/text/index.html": {
+    "href": "guides/text/index.html",
+    "title": "Text | SideyBot Documentation",
+    "keywords": "Text Overview The Text modules provide commands for manipulating text and creating text related memes."
+  },
+  "guides/text/memes/bew/index.html": {
+    "href": "guides/text/memes/bew/index.html",
+    "title": "Bew | SideyBot Documentation",
+    "keywords": "Bew Overview The Bew command will turn the given input text into a bew shape. (Bew is the first 4 notes from Xyphos in Soulless 2 by ExileLord). Arguments Name Type Options Description Input String N/A The text to bew-ify. Usage Example /bew input: hello This will bew-ify the given input and will end up looking like this: hello hello hello hello hello hello"
+  },
+  "guides/text/memes/index.html": {
+    "href": "guides/text/memes/index.html",
+    "title": "Text Memes | SideyBot Documentation",
+    "keywords": "Text Memes Overview The Text Memes module contains commands to make text based memes."
+  },
+  "guides/text/memes/lean/index.html": {
+    "href": "guides/text/memes/lean/index.html",
+    "title": "Lean | SideyBot Documentation",
+    "keywords": "Lean Overview The Lean command will turn the given sentence into random keyboard mashing. Because of how the command works, outputs will actually be somewhat consistent and predictable. Arguments Name Type Options Description Input String N/A The text to lean-ify. Usage Example /lean input: hello everyone This will lean-ify the given input and will end up looking like this: qzcrmdnuwvyfkitlldNPnpKGoFklDltldgx$kKgocld"
+  },
+  "guides/text/memes/pasta/index.html": {
+    "href": "guides/text/memes/pasta/index.html",
+    "title": "Pasta | SideyBot Documentation",
+    "keywords": "Pasta Overview The Pasta command will turn the given sentence into a copypasta with emojis inbetween the words. The probability to put an emoji can be set to some value between 0.0 and 1.0 (1 being 100% probability). Arguments Name Type Options Description Sentence String N/A The text to make a copypasta of. Probability Float N/A The probability to place an emoji. Usage Example /pasta sentence: this is now turned into a copypasta! This will turn the given sentence into something like this: this 😽 is 😡 now 😡 turned 😦 into 😭 a 😟 copypasta! 😇"
+  },
+  "guides/text/utility/acronym/index.html": {
+    "href": "guides/text/utility/acronym/index.html",
+    "title": "Acronym | SideyBot Documentation",
+    "keywords": "Acronym Overview The Acronym command will turn the given input into an acronym. Arguments Name Type Options Description Sentence String N/A The sentence to turn into an acronym. Usage Example /acronym sentence: This is an acronym! This will turn the given sentence into an acronym: Tiaa"
+  },
+  "guides/text/utility/index.html": {
+    "href": "guides/text/utility/index.html",
+    "title": "Text Utility | SideyBot Documentation",
+    "keywords": "Text Utility Overview The Text Utility module contains text related utility commands."
+  },
+  "guides/text/utility/lowercase/index.html": {
+    "href": "guides/text/utility/lowercase/index.html",
+    "title": "Lowercase | SideyBot Documentation",
+    "keywords": "Lowercase Overview The Lowercase command will turn the given input into an lowercase. Arguments Name Type Options Description Sentence String N/A The sentence to turn into lowercase. Usage Example /lowercase sentence: HELLO WORLD! This will turn the given sentence into lowercase: hello world!"
+  },
+  "guides/text/utility/permutations/index.html": {
+    "href": "guides/text/utility/permutations/index.html",
+    "title": "Permutations | SideyBot Documentation",
+    "keywords": "Permutations Overview The Permutations command will turn the given input into an uppercase. Arguments Name Type Options Description Word String N/A The word to find the amount of permutations for. Usage Example /permutations word: hello This will find the amount of permutations for the word \"hello\". Which ends up being 60."
+  },
+  "guides/text/utility/shuffle/index.html": {
+    "href": "guides/text/utility/shuffle/index.html",
+    "title": "Shuffle | SideyBot Documentation",
+    "keywords": "Shuffle Overview The Shuffle command will shuffle all the words in the given sentence. It is random every time. Arguments Name Type Options Description Sentence String N/A The sentence to shuffle. Usage Example /shuffle sentence: this will become shuffled This will shuffle the given sentence. this shuffled become will"
+  },
+  "guides/text/utility/uppercase/index.html": {
+    "href": "guides/text/utility/uppercase/index.html",
+    "title": "Uppercase | SideyBot Documentation",
+    "keywords": "Uppercase Overview The Uppercase command will turn the given input into an uppercase. Arguments Name Type Options Description Sentence String N/A The sentence to turn into uppercase. Usage Example /lowercase sentence: hello world! This will turn the given sentence into uppercase: HELLO WORLD!"
+  },
+  "guides/unilang/arpeggiator/index.html": {
+    "href": "guides/unilang/arpeggiator/index.html",
+    "title": "Arpeggiator | SideyBot Documentation",
+    "keywords": "Arpeggiator Aliases ARPEGGIATOR , ARP , A Overview The Arpeggiator function will loop through the input pattern as many times as specified. Arguments Name Type Description Pattern string The pattern to arpeggiate. Count integer How many times to arpeggiate it. Example 1 ARP(1254, 4) Will arpeggiate the pattern \"1254\" a total of 4 times. Example 2 Any state changes done in the middle of the Arpeggiator will revert back on each loop repetition. This means that if you put a TAP function in an Arpeggiator, it will only make the notes you specify tap notes. ARP(12TAP(34)54, 3)"
+  },
+  "guides/unilang/bpm/index.html": {
+    "href": "guides/unilang/bpm/index.html",
+    "title": "BPM | SideyBot Documentation",
+    "keywords": "BPM Aliases BPM , B Overview The BPM function will set the BPM of the chart at this point to the specified value. Arguments Name Type Description Value float The bpm to set the chart to at this point. Note The BPM is float, meaning that, opposed to .chart files, a value of 140 will set the bpm to 140 instead of 140000. Tip If there is no BPM function at the beginning of the code, then a BPM of 120 will be set from the beginning. This BPM will remain until a BPM function is specified. Example 12341234BPM(240)23452345 Will set the BPM to 240 after the first 8 notes."
+  },
+  "guides/unilang/chartevent/index.html": {
+    "href": "guides/unilang/chartevent/index.html",
+    "title": "Chart Event | SideyBot Documentation",
+    "keywords": "Chart Event Aliases CHARTEVENT , GLOBALEVENT , CE , GE Overview The Chart Event function will create a chart event at this point. Arguments Name Type Description Event name string The name of the event to place at this point. Tip Chart Event is the exact same as a \"Global Event\" in MoonScraper. Example 12CE(\"hello\")34 This will create a Chart Event with name \"hello\" at the same location as the note with value 3 (yellow) after. Note This example image does not represent what the /pattern command will output. It's just an example showing where the chart event will go."
+  },
+  "guides/unilang/chord/index.html": {
+    "href": "guides/unilang/chord/index.html",
+    "title": "Chord | SideyBot Documentation",
+    "keywords": "Chord Aliases CHORD , CH , 🎶 Overview The Chord function will create a chord. Functionally, this works the exact same as encompassing something with square brackets [] . For a shorter way to write 5 fret chords, see the Shorthand Chord function. Arguments Name Type Description Pattern string The pattern to create a chord from. Example 1 CHORD(345)321 Will create a chord with the notes 3, 4, 5, followed by singular notes of 3, 2, 1 Square Brackets The Chord function is the internal Unilang function for notes wrapped in square brackets [] . Example 2 [1234]135[2345]432[12] An example showing usage of square brackets for chords instead of CHORD. Functions Within Chords As the Chord function is a function, other functions can be put inside of chords. Example 3 [SW(1,5)]54321 Example showing function behaviour within chords. Namely the Sweep function from 1 to 5 within a chord. Note Values Above 5 As with notes, chords also allow note values above 5. Example 4 [1234567][345] Example showing chords allowing values above 5. Tip In SideyBot, note values are capped at 50. To write a note with higher values than 9, use a-z or '10' numbers in single quotes ' . See more at Note Note Properties Chords can have note properties, just like normal notes. See Set Note Properties for more information. Example 5 [12345]{16} Setting note properties after a chord will set the properties of the entire chord. Example 6 [123{16}45] Setting note properties within a chord will set the properties of the accompanying fret. Note If a fret inside already has note properties, the external note properties will not override that fret. Example 7 [123{16}45]{8} Setting different note properties internally and externally. Open Notes Chords can have open notes as a fret, just like in Clone Hero. Example 8 [024]12345 An example showing a chord with, Open, Red, Blue frets. HOPO and Tap Chords HOPO and Tap rules apply to chords just like they do in Clone Hero. Example 9 [12][23][34][45]TAP([12][23][34][45])HOPO([12][23][34][45]) An example showing different types of chords."
+  },
+  "guides/unilang/code/index.html": {
+    "href": "guides/unilang/code/index.html",
+    "title": "Code | SideyBot Documentation",
+    "keywords": "Code Aliases CODE , CB Overview Will initialize a code block with the given input. This is functionally the same as using angle brackets <> Arguments Name Type Description Code string The string to be interpreted as code. Warning Code blocks are currently an unimplemented feature. Using code blocks will currently not do anything."
+  },
+  "guides/unilang/force/index.html": {
+    "href": "guides/unilang/force/index.html",
+    "title": "Force | SideyBot Documentation",
+    "keywords": "Force Aliases FORCE , F Overview The Force function will force all the notes in the given pattern. Forcing will follow normal Clone Hero rules. If the note would have been a strum, it will become a HOPO and vice versa. Arguments Name Type Description Pattern string The pattern to force. Example 1 FORCE(1234[12][23][34][45]) The example shows what happens when forcing HOPOs and strum notes. Note The first note in any chart will always be a strum unless it is a tap."
+  },
+  "guides/unilang/hopo/index.html": {
+    "href": "guides/unilang/hopo/index.html",
+    "title": "HOPO | SideyBot Documentation",
+    "keywords": "HOPO Aliases HOPO , H Overview The HOPO function will turn all the notes within it to HOPOs. Arguments Name Type Description Pattern string The pattern to make into HOPOs. Note The HOPO function will override any internal note type mutators. Example 1 HOPO(1234[12][23][34][45]) The example shows what happens when using the HOPO function. Note The first note in any chart will always be a strum unless it is a tap."
+  },
+  "guides/unilang/index.html": {
+    "href": "guides/unilang/index.html",
+    "title": "Unilang | SideyBot Documentation",
+    "keywords": "Unilang Unilang is a scripting language made for Unison. The syntax of this language is quite unique as it is meant for charting. Basics Unilang is interpreted from left to right. The language contains short ways to write notes, chords, quantizations and sustains. Notes Placing notes is as simple as using numbers and lowercase letters. The input character represents what fret value the note will have. Note Value Result 0 Open note 1 - 5 Green to orange 6 - 9 Extended values above orange a - z Extended values above the 9th note Tip You can use single quotes ' around a note to write the value too instead of using a-z. Ex. '10' will place note of value 10. Example 1 123454321 Writing numbers like this in a row will results in each one being treated as a note. You may notice that, notes become HOPOs after the first note. The reason for this is that the default quantization is set to 1/16. For more about quantizations, see the Quantization section and Quantization for more. For more about note placing, see Note Quantization Quantization, or the step, can be set by wrapping a number in | bars. The default quantization is 1/16. See Quantization for more. Example 2 1234|12|234|8|34|12|123 Using different quantizations. Chords Placing chords can be achieved by wrapping something in square brackets [] . See Chord for more about chords. Example 3 |8|[345][234][123] Wrapping something in square brackets will create chords. In this case 3, three note chords. Sustains and Note Properties You can set the sustain length and other note properties by putting curly brackets {} after any note. Example 4 1234{5}5{4,t} Creates 4 notes where the blue note will have a sustain length of 5 steps, and the orange note a length of 4 and being a tap. Functions Unilang comes with a bunch of quality of life functions for writing shorter and more readable Unilang code. Functions always start with a CAPITAL letter. Check the different function pages for other aliases of the functions. After the first letter, functions are case insensitive. As an example, that means that the ARPEGGIATOR function can be written as ARPEGGIATOR, Arpeggiator, ArPeGgIaToR, or any other alternative capitalization as long as the first letter is a CAPITAL letter. Example 5 ARP(1254, 4) Will arpeggiate the pattern \"1254\" a total of 4 times. For more about what the different functions do, check the different pages within this category. Short-hands For Functions In Unilang, at the base level, everything is treated as a function. That means that, yes, a note is a function, a quantization is a function, a chord is a function and so on. In the examples you may have already seen the short-hand versions of some of these functions. Some Concrete Function vs. Short-hands Function Equivalent Shorthand See more NOTE(1) 1 Note QUANTIZATION(16) |16| Quantization QUANTIZATION(16, none) |16!| QUANTIZATION(16, backwards) |16:| CHORD(123) [123] Chord NOTE(1)SETPROP(8) 1{8} Set Note Properties NOTE(1)SETPROP(8)UNSNAP_SUS() 1{8}^ Unsnap Sustain SHORTHAND_CHORD(a) .a Shorthand Chord SHORTQUANT(1) ;1 Shorthand Quantization SHORTQUANT(1, none) ;1! SHORTQUANT(1, backwards) ;1: NOTE(1)JUMP_STEP()NOTE(2) 1-2 Jump Step NOTE(1)SNAP_BEAT()NOTE(2) 1=2 Snap Beat RANDOM() ? Random Other functions do not have short-hands, which means you will have to specify them by name. Some notable functions you might find useful right away are listed below. Function Equivalent Description See more ARP(1234,4) Arpeggiates the pattern the given amount of times. Arpeggiator FORCE(1234) Forces all the notes in the input pattern. Force HOPO(1234) Turns the input pattern into HOPO notes. HOPO STRUM(1234) Turns the input pattern into Strum notes. Strum TAP(1234) Turns the input pattern into Tap notes. Tap STARPOWER(1234) Turns the input pattern into Starpower notes. Starpower For other functions, please refer to their respective pages for more information."
+  },
+  "guides/unilang/jumpstep/index.html": {
+    "href": "guides/unilang/jumpstep/index.html",
+    "title": "Jump Step | SideyBot Documentation",
+    "keywords": "Jump Step Aliases JUMP_STEP , JS Overview The Jump Step function moves the chart forward in steps equal to the quantization. Functionally, this is identical to using a - dash. It will jump forward by the current amount of steps, step distance being whatever the quantization/step is at this point. Arguments Name Type Description StepCount (optional) integer The amount of steps to jump forward. Default is 1 Note If step count is empty JS() , it will jump 1 step. If step count is less than 1, I.e. JS(0) , it will not jump at all. Tip Default quantization is 1/16, so unless a different quantization is specified, Jump Step will always jump in intervals of 1/16. See Quantization for more information about quantization. Example 1 123JS()543 This will jump 1 step forwards after the first yellow note. Example 2 123JS(4)543 This will jump 4 steps forwards after the first yellow note. Using Dashes Using a - dash serves as a short-hand for the Jump Step function, and will jump 1 step. Example 3 123-345 This shows shorthand Jump Step with - and will jump 1 step after the first yellow note. Tip Multiple dashes in a row will behave like one might expect. Two dashes -- , will jump two steps, --- will jump three steps, and so on. Different Quantizations Using different quantizations will change the behaviour. See Quantization for more information about quantization. Example 4 |8|123-345 Jump step in quantization 1/8."
+  },
+  "guides/unilang/letters/index.html": {
+    "href": "guides/unilang/letters/index.html",
+    "title": "Letters | SideyBot Documentation",
+    "keywords": "Letters Aliases LETTERS , LETTER , LET , ABC , MTB Overview The Letters function will turn the characters you input into Message To Blue (MTB) style letters. Arguments Name Type Description InputString string The input string to convert to letters. Note The Letters function does support all of ascii and extended ascii but anything beyond will not work. Tip Quantization does not affect the output of the Letters function. Warning Any control characters such as tabs and enter and carriage return will be ignored. Example 1 LET(ABC) Will create MTB style letters of \"ABC\" . What about commas? Because of how functions in Unilang work, commas , will be treated as a split between different function parameters. However, you can get around this by using a string instead for your input. Within a string you can place any character. Tip string escaping rules apply, so if you want to use a character such as a quote \" in a string, you will have to escape it using a backslash \\ . For \" do \\\" , for \\ do \\\\ Example 2 LET(\"HI, \\\"YO\\\"\") Example showing a string for commas and escaping characters as well as spaces."
+  },
+  "guides/unilang/load/index.html": {
+    "href": "guides/unilang/load/index.html",
+    "title": "Load | SideyBot Documentation",
+    "keywords": "Load Aliases LOAD , L Overview The Load function will load a variable at the current position and interpret it as a pattern. Its intended use is together with Pattern functions or code blocks. See Pattern and Code for more information about variables. Arguments Name Type Description VariableName string The name of the variable to load. Tip You can load multiple variables in a row by separating them by commas. L(a,b) will first load variable a, then variable b. Example 1 PAT(a,1234)LOAD(a) Will load the variable with name a as a pattern. See Pattern for more about how to create patterns. Warning If you try to load a pattern that does not exist, you will get an error. Example 2 PAT(a,1234)PAT(b,2345)LOAD(a,b,b,a) Loading multiple patterns in one Load function. Warning Loading itself within a PATTERN function will likely cause a recursion error."
+  },
+  "guides/unilang/mirror/index.html": {
+    "href": "guides/unilang/mirror/index.html",
+    "title": "Mirror | SideyBot Documentation",
+    "keywords": "Mirror Aliases MIRROR , RORRIM , M Overview The Mirror function will mirror the given pattern around the given max note. Arguments Name Type Description Pattern string Pattern to mirror. MaxNote (optional) integer The maximum note value at which to mirror around. Default value is 5. Note If the given pattern contains notes that are above the given MaxNote, it will mirror around the pattern's max note instead. Example 1 MIRROR(12345) Will mirror the 5 notes. Example 2 MIRROR(12345, 7) Will mirror the 5 notes with max note at value 7."
+  },
+  "guides/unilang/note/index.html": {
+    "href": "guides/unilang/note/index.html",
+    "title": "Note | SideyBot Documentation",
+    "keywords": "Note Aliases NOTE , NT , 🎵 , ♩ Overview The Note function is the base note creation function. Using numbers 0-9 or lowercase letters a-z, will yield the same result as using the Note function (without Length and Type parameters.) Arguments Name Type Description FretValue integer The fret value of this note. Fret Value The fret will be defined as follows: Input Value any integer value The value given ZGRYBOPLMT or 0 - 9 0 - 9 (0 is open note) a - z 10 - 35 Examples Example 1 NOTE(1) A note of value 1, being a green note. Using \" G \" for the fret value also works in the Note function. Example 2 NOTE(1)NOTE(10) A note with value 1 followed by a note with value 10. a also works to define value 10. Alternate Ways of Writing Notes Writing a NOTE function for every note becomes cumbersome and tedious, therefore, Unilang will interpret numbers 0-9 and letters a-z as notes with values 0-35. If you want notes above 35 for some reason, you can use the NOTE function, or surround any integer value with single quotes ' to achieve this. Example 3 123456789abc Using numbers and letters to write notes. Example 4 1111'10''10''10''10' Using quotes to write note values above 9. Chords You can use the CHORD function or wrap notes within square brackets [] to create chords. See Chord for more information about chords. Example 5 [345]3210 Will create a chord with the notes 3, 4, 5, followed by singular notes of 3, 2, 1 then an open note. Note Properties You can also use curly braces {} or the SET_NOTE_PROPERTIES function after any note to set the length and type of that note. See Set Note Properties for more information about setting note properties. Example 6 3{8} Setting the length of a yellow note to 8 steps using curly braces."
+  },
+  "guides/unilang/null/index.html": {
+    "href": "guides/unilang/null/index.html",
+    "title": "Null | SideyBot Documentation",
+    "keywords": "Null Aliases NULL Overview The Null function does nothing."
+  },
+  "guides/unilang/pattern/index.html": {
+    "href": "guides/unilang/pattern/index.html",
+    "title": "Pattern | SideyBot Documentation",
+    "keywords": "Pattern Aliases PATTERN , PAT , P Note Not to be confused with the Pattern command. Overview The Pattern function will create a loadable pattern. Its intended use is together with Load functions. Arguments Name Type Description PatternName string The name of the pattern to be created. Pattern string The pattern to be stored. Example 1 PAT(a,1234)LOAD(a) This will create a pattern with the name \" a \" which then can be loaded with the Load function. Example 2 PAT(a,1234)PAT(b,LOAD(a)5)LOAD(b) You can put Load functions and any other functions with Pattern functions. Warning Loading itself, such as doing P(a,L(a)) is likely to cause a recursion error."
+  },
+  "guides/unilang/quantization/index.html": {
+    "href": "guides/unilang/quantization/index.html",
+    "title": "Quantization | SideyBot Documentation",
+    "keywords": "Quantization Aliases QUANTIZATION , STEP , QUANT Q Overview The Quantization function will set the quantization, or step of the parser at this point. A value of 16 means 1/16th step. This function is functionally identical to using | for quantization. Ex. |16| means the same as QUANTIZATION(16) . For a shorter way to write basic quantizations, see the Shorthand Quantization function. Arguments Name Type Description Value integer The value of the quantization as 1/value . SnapMode (optional) string Defines the SnapMode for this quantization. Default is FORWARDS. Allowed snapmodes are NONE, FORWARDS, BACKWARDS. See Examples 3a, 3b and 3c for the differences. Example 1 1234QUANT(8)5432 Sets the quantization to 1/8th after the blue note. Example 2 1234|8|5432 Yields the same result as Example 1, but using the | bar notation. Snap Mode The second parameter of Quantization function defines what way quantization snapping should be handled. It has three modes: Mode Behaviour Bar Notation FORWARDS Snaps to the next closest multiple unless it is already on that multiple. |16| - No Extra character BACKWARDS Snaps to the closest position after the previous note. |16:| - Colon NONE No snapping, it just sets the quantization and. This can create offset notes. |16!| - Exclamation Mark QUANT(16, NONE) is the same as |16!| . Example 3a 123|12|123 FORWARDS snapping. Example 3b 123|12:|123 BACKWARDS snapping. Example 3c 123|12!|123 NONE snapping."
+  },
+  "guides/unilang/random/index.html": {
+    "href": "guides/unilang/random/index.html",
+    "title": "Random | SideyBot Documentation",
+    "keywords": "Random Aliases RANDOM , RND , S!RAND Overview The Random function will, as one might expect, place a random note. It will place a random note between the given min and max notes. Using RANDOM() with no arguments is functionally identical to using a ? character. Arguments Name Type Description MinValue (optional) integer The minimum value of the random function. Default is 1. MaxValue (optional) integer The maximum value of the random function. Default is 5. Seed (optional) integer The seed to set while doing the random. A value of -2147483648 will use a random seed. This is also the default value. Example 1 RND()RND()RND()RND()RND() 5 random notes. As the function is the \"Random\" function, it will be completely random every time. Example 2 ARP(RND(1,9),8) 8 random notes between 1 and 9. Using the ? Character Using ? does the same as using the Random function with default parameters RANDOM(1,5) . Example 3 ?????????? 10 question marks makes 10 random notes between 1 and 5."
+  },
+  "guides/unilang/reflect/index.html": {
+    "href": "guides/unilang/reflect/index.html",
+    "title": "Reflect | SideyBot Documentation",
+    "keywords": "Reflect Aliases REFLECT , RF Overview The Reflect function will mirror the notes around an anchor. The default anchor is 3. Arguments Name Type Description Pattern string The pattern to reflect. Anchor (optional) integer The anchor to reflect around. Example 1 REFLECT(1234) Reflects the four notes along the default anchor which is 3. Example 2 REFLECT(1234, 6) Reflects the four notes along the anchor with value 6."
+  },
+  "guides/unilang/repeat/index.html": {
+    "href": "guides/unilang/repeat/index.html",
+    "title": "Repeat | SideyBot Documentation",
+    "keywords": "Repeat Aliases REPEAT , R Overview The Repeat function is very similar to the Arpeggiator Function in that it loops through notes. Arguments Name Type Description Pattern string The pattern to repeat. Count integer How many times to repeat it. Example 1 REPEAT(1254, 4) Will repeat each note in the pattern \"1254\" a total of 4 times. Warning Currently this function is only partially implemented. So it wont be able to repeat everything like expected, full functionality is planned for a later release."
+  },
+  "guides/unilang/section/index.html": {
+    "href": "guides/unilang/section/index.html",
+    "title": "Section | SideyBot Documentation",
+    "keywords": "Section Aliases SECTION , SEC Overview The Section function will create a section at this point. Arguments Name Type Description Section name string The name of the section to place at this point. Example 12SEC(\"hello\")34 This will create a section with name \"hello\" at the same location as the note with value 3 (yellow) after. Note This example image does not represent what the /pattern command will output. It's just an example showing where the section will go."
+  },
+  "guides/unilang/seed/index.html": {
+    "href": "guides/unilang/seed/index.html",
+    "title": "Seed | SideyBot Documentation",
+    "keywords": "Seed Aliases SEED , RANDOMSEED , RS Overview The Seed function sets the seed for the global random number generator. This is useful if you want the Random function to have a predictable output. For more information, see the Random function. Arguments Name Type Description Seed integer The seed for the random number generator. Example 1 SEED(0)ARP(?,16) Sets the seed to 0, and places 16 random notes. Because the seed was set to a value, the output will always be consistent in this scenario. Question marks ? denote placing a random note. For more information, see the Random function."
+  },
+  "guides/unilang/setnoteproperties/index.html": {
+    "href": "guides/unilang/setnoteproperties/index.html",
+    "title": "Set Note Properties | SideyBot Documentation",
+    "keywords": "Set Note Properties Aliases SET_NOTE_PROPERTIES , SETPROP , SNP Overview The Set Note Properties function sets the properties of the previous note. It is functionally identical to using curly braces {} after a note. Note By default, the length parameter snaps to after the sustain. Use a carat after the Set Note Properties function ^ to make it not snap. Arguments Name Type Description Length (optional) float The length of the note in steps. Type (optional) string The type of the note. Note Length The first parameter is the length to set the previous note to in steps. If the quantization is 1/16, then a value of 16 will be 16 steps long, or one measure in this case. Tip If you want a note of length 31 1/32nd steps at quantization 1/16 you can use a decimal point and write 15.5. Note Type The second parameter of the Set Note Properties function defines the previous note's type. This does not override any external type specifications specified by functions such as tge HOPO , Force , Strum and Tap functions. Type is defined as follows (case insensitive): Input NoteType 0 or n or natural Natural 1 or f or h or forced or hopo Forced 2 or t or tap Tap Example 1 3SNP(8) Sets the length of the green note to 8 steps. Example 2 1SNP(4, tap) Sets the length of the green note to 4 steps, and sets it to a tap. Example 3 1{4}23{4}^1245 Example showing curly bracket {} usage as well as not snapping. Note Setting note properties within a chord, by default does not snap. This is to make extended sustains easier. Any length property defined outside the chord such as [123]{4} will snap 4 steps forwards."
+  },
+  "guides/unilang/shift/index.html": {
+    "href": "guides/unilang/shift/index.html",
+    "title": "Shift | SideyBot Documentation",
+    "keywords": "Shift Aliases SHIFT , C Overview The shift function will shift the notes over by the specified amount, and will clamp the notes within the given max and min note. Arguments Name Type Description Pattern string The pattern to shift. Amount integer The amount to shift the pattern. MaxNote (optional) integer The maximum note to clamp the shift to. Default is 5. MinNote (optional) integer The minimum note to clamp the shift to. Default is 1. Example 1 SHIFT(1234, 2) Shifts the four notes over by 2 places, making it the same as 3456. Max and Min Notes Using the MaxNote and MaxNote arguments you can effectively shift the notes and clamp the notes within an area. Example 2 SHIFT(12345, 2, 5) Shifts the five notes over by 2 and clamps them between the maxnote 5 and (default) 1. What About Chords? Chords will also shift over and be clamped. However, they will attempt to keep the amount of frets they had when possible. Example 3 SHIFT([235]123[15]543[12345], 2, 5) Shifts the input over by 2 and clamps them between the maxnote 5 and (default) 1. As you can see, the chord with notes 2, 3, 5 was moved over to become 3, 4, 5. It kept the amount of frets it had. The 1, 5 chord was squished upwards to become 3, 5, and the 5 note chord retained it's fret count."
+  },
+  "guides/unilang/shorthandchord/index.html": {
+    "href": "guides/unilang/shorthandchord/index.html",
+    "title": "Shorthand Chord | SideyBot Documentation",
+    "keywords": "Shorthand Chord Aliases SHORTHAND_CHORD , SHORTCHORD , SC Overview The Shorthand Chord function takes letters as input and turns them into chords. Note Not to be confused with the Letters function. This function is functionally identical to using . followed by a character. This function is quite handy if you need to write shorter Unilang code. Arguments Name Type Description ChordLetters string The shorthand chord letters. List of Chords Here is a list of what letters map to each chord. The rule is that the top note will change first. One note Two note chords Three note chords Four note chords Five note chords 0 -> [0] a -> k -> u -> z -> 1 -> [1] b -> l -> v -> 2 -> [2] c -> m -> w -> 3 -> [3] d -> n -> x -> 4 -> [4] e -> o -> y -> 5 -> [5] f -> p -> 6 -> [6] g -> q -> 7 -> [7] h -> r -> 8 -> [8] i -> s -> 9 -> [9] j -> t -> Example 1 SC(abcd) Places the shorthand chords corresponding to the letters a , b , c , d , being [12] , [13] , [14] , [15] . Using Period . Characters You can write . followed by one of the chord letters above to achieve the same as SHORTHAND_CHORD() with one letter input. Example 2 .a.e.h.j Places the shorthand chords corresponding to the letters a , e , h , j , being [12] , [23] , [34] , [45] . Tip Any chord is shorter to write using . notation. However, using it does come at the cost of readability. Tip If you have more than 4 short hand chords, SC(input) notation becomes shorter than using . notation."
+  },
+  "guides/unilang/shorthandquantization/index.html": {
+    "href": "guides/unilang/shorthandquantization/index.html",
+    "title": "Shorthand Quantization | SideyBot Documentation",
+    "keywords": "Shorthand Quantization Aliases SHORTHAND_QUANTIZATION , SHORTQUANT , SQ Overview The Shorthand Quantization function takes a letter as input and turns it into a quantization. This function is functionally identical to using ; followed by a character. This function is quite handy if you need to write shorter Unilang code. Arguments Name Type Description ShortQuantLetter string The shorthand quantization letter. ShouldSnap (optional) boolean Should the quantization snap to the nearest multiple of the value. Default is true . List of Quantizations Here is a list of what letters map to each quantization. The letters are grouped in multiples. Multiple of 2 Multiple of 3 Multiple of 5 Multiple of 7 Multiple of 9 1 -> 1/1 a -> 1/3 A -> 1/5 j -> 1/7 I -> 1/9 2 -> 1/2 b -> 1/6 B -> 1/10 k -> 1/14 J -> 1/18 3 -> 1/4 c -> 1/12 C -> 1/20 l -> 1/28 K -> 1/36 4 -> 1/8 d -> 1/24 D -> 1/40 m -> 1/56 L -> 1/72 5 -> 1/16 e -> 1/48 E -> 1/80 n -> 1/112 M -> 1/144 6 -> 1/32 f -> 1/96 F -> 1/160 o -> 1/224 N -> 1/288 7 -> 1/64 g -> 1/192 G -> 1/320 p -> 1/448 O -> 1/576 8 -> 1/128 h -> 1/384 H -> 1/640 9 -> 1/256 i -> 1/768 0 -> 1/512 Example 1 SQ(6)ARP(1234,4) Places the shorthand quantization corresponding to the character 6 , meaning 1/32, followed by 16 notes. Using Semicolon ; Characters You can write ; followed by one of the quantization letters above to achieve the same as SHORTHAND_QUANTIZATION() . Example 2 ;dARP(321,4) Places the shorthand quantization corresponding to the character d , meaning 1/24, followed by 12 notes. Snap Mode As with the Quantization function you can specify the snapping mode. See the Quantization function for more information about snapping mode. Mode Shorthand Notation FORWARDS ;a - No Extra character BACKWARDS ;a: - Colon NONE ;a! - Exclamation Mark Tip Any quantization (within the listed quantizations) is shorter to write using ; notation. However, using it does come at the cost of readability."
+  },
+  "guides/unilang/snapbeat/index.html": {
+    "href": "guides/unilang/snapbeat/index.html",
+    "title": "Snap Beat | SideyBot Documentation",
+    "keywords": "Snap Beat Aliases SNAP_BEAT , SB Overview The Snap Beat function will snap to the nearest next beat. You can also specify an amount of beats to jump after snapping. Default is 0 beats. Functionally, this is identical to using an = equals character. Arguments Name Type Description JumpCount (optional) integer The amount of beats to jump after snapping. Default is 0. Note If jump count is empty SB() , it will snap to the nearest beat and jump 0 beats, unless it is already on a beat, in which it will jump ot the next beat. Tip Unlike the Jump Step function, this function behaves the same under any quantization. Example 1 12SB()543 This will snap to the nearest beat after the red note. Example 2 123SB(1)543 This will snap to the nearest beat and jump one beat. Using the = Character Using equals = characters, functions identical to SB() . Example 3 12=543 This will snap to the nearest beat after the red note."
+  },
+  "guides/unilang/snapmeasure/index.html": {
+    "href": "guides/unilang/snapmeasure/index.html",
+    "title": "Snap Measure | SideyBot Documentation",
+    "keywords": "Snap Measure Aliases SNAP_MEASURE , SM Overview The Snap Measure function will snap to the nearest next measure. You can also specify an amount of measures to jump after snapping. Default is 0 measures. Arguments Name Type Description JumpCount (optional) integer The amount of measures to jump after snapping. Default is 0. Note If jump count is empty SM() , it will snap to the nearest measure and jump 0 measures, unless it is already on a measure, in which it will jump ot the next measure. Tip Unlike the Jump Step function, this function behaves the same under any quantization. Example 1 123SM()543 This will snap to the nearest measure after the first yellow note. Example 2 123SM(1)543 This will snap to the nearest measure and jump one measure."
+  },
+  "guides/unilang/starpower/index.html": {
+    "href": "guides/unilang/starpower/index.html",
+    "title": "Starpower | SideyBot Documentation",
+    "keywords": "Starpower Aliases STARPOWER , SP , $ , ⭐ , ★ Overview The Starpower will make all the notes within it into starpower notes. Arguments Name Type Description Pattern string Pattern to make into starpower notes. Example 1 1234SP(5432)1234 This will make the middle four notes into starpower Example 2 1234SP(STRUM(1[23])HOPO([34]4)TAP(5[45]))123 Showing chords and different note types under starpower."
+  },
+  "guides/unilang/strum/index.html": {
+    "href": "guides/unilang/strum/index.html",
+    "title": "Strum | SideyBot Documentation",
+    "keywords": "Strum Aliases STRUM , S Overview The Strum function will turn all the notes within it to strums. Arguments Name Type Description Pattern string The pattern to make into strums. Note The Strum function will override any internal note type mutators. Example 1 STRUM(1234[12][23][34][45]) The example shows what happens when using the Strum function."
+  },
+  "guides/unilang/sustaingap/index.html": {
+    "href": "guides/unilang/sustaingap/index.html",
+    "title": "Sustain Gap | SideyBot Documentation",
+    "keywords": "Sustain Gap Aliases SUSTAIN_GAP , SUS_GAP , SG Overview The Sustain Gap function will set the sustain gap. The default sustain gap from the start is no sustain gap. Arguments Name Type Description SustainGapStep (optional) float The step for the sustain gap. Default is 0. Note A step of 0 will set the gap to be nothing. 2 sets it to 1/2, 4 to 1/4, 32 sets it to 1/32, and so on. Example 1 SG(32)1{4}2{4}3 This will set the sustain gap to 1/32nd."
+  },
+  "guides/unilang/swap/index.html": {
+    "href": "guides/unilang/swap/index.html",
+    "title": "Swap | SideyBot Documentation",
+    "keywords": "Swap Aliases SWAP , SWP , PS Overview The Swap function will swap values of the two given variables. This function is intended to be used in conjunction with Load and Pattern functions. Arguments Name Type Description Variable1 string The name of the first variable to swap. Variable2 string The name of the second variable to swap. Example 1 PAT(a,1234)PAT(b,2345)LOAD(a,b)SWAP(a,b)LOAD(a,b) Will create two patterns with names a and b . Loads a, b then swaps a, b then loads a, b ."
+  },
+  "guides/unilang/sweep/index.html": {
+    "href": "guides/unilang/sweep/index.html",
+    "title": "Sweep | SideyBot Documentation",
+    "keywords": "Sweep Aliases SWEEP , SW Overview The Sweep function will make a sweep at the current quantization from the given start note to the given end note. Arguments Name Type Description StartNote (optional) integer The start note for the sweep. Default is 1. EndNote (optional) integer The end note for the sweep. Default is 5. Note If StartNote is less than EndNote, the sweep will go up. If EndNote is less than StartNote, the sweep will go down. Example 1 SW(1,7) This will create a sweep that goes from note value 1 to note value 7. Example 2 SW(7,1) This will create a sweep that goes down from note value 7 to note value 1. Chords? As with any other function, you can put the Sweep function inside of chords. This is handy if you want to make quite large chords with every note. Example 3 [SW(1,7)] This will create a chord from a sweep of 7 notes, which makes a 7 note chord."
+  },
+  "guides/unilang/tap/index.html": {
+    "href": "guides/unilang/tap/index.html",
+    "title": "Tap | SideyBot Documentation",
+    "keywords": "Tap Aliases TAP , T Overview The Tap function will turn all the notes within it to taps. Arguments Name Type Description Pattern string The pattern to make into taps. Note The Tap function will override any internal note type mutators. Example 1 TAP(1234[12][23][34][45]) The example shows what happens when using the Tap function."
+  },
+  "guides/unilang/timesignature/index.html": {
+    "href": "guides/unilang/timesignature/index.html",
+    "title": "Time Signature | SideyBot Documentation",
+    "keywords": "Time Signature Aliases TIME_SIGNATURE , TIMESIG , TS Overview The Time Signature function will create a time signature at the current position. Arguments Name Type Description Numerator (optional) integer The numerator for the time signature. Default is 4. Denominator (optional) integer The denominator for the time signature. Default is 4. Note If the denominator is not a multiple of 2, it will round up to the nearest power of 2. Example 1 TS(3,4)ARP(1234,4) This will create a 3/4 time signature at the current point. Example 2 TS(3,5)A(12345,3) Since denominator is 5, it will round up to 8. This will then create a 3/8 time signature."
+  },
+  "guides/unilang/trackevent/index.html": {
+    "href": "guides/unilang/trackevent/index.html",
+    "title": "Track Event | SideyBot Documentation",
+    "keywords": "Track Event Aliases TRACKEVENT , LOCALEVENT , TE , LE Overview The Track Event function will create a track event at this point. Arguments Name Type Description Event name string The name of the event to place at this point. Tip Track Event is the exact same as a \"Local Event\" in MoonScraper. Example 12TE(\"hello\")34 This will create a Track Event with name \"hello\" at the same location as the note with value 3 (yellow) after. Note This example image does not represent what the /pattern command will output. It's just an example showing where the track event will go."
+  },
+  "guides/unilang/unsnapsustain/index.html": {
+    "href": "guides/unilang/unsnapsustain/index.html",
+    "title": "Unsnap Sustain | SideyBot Documentation",
+    "keywords": "Unsnap Sustain Aliases UNSNAP_SUSTAIN , UNSNAP_SUS , UN_SUS US Overview The Unsnap Sustain function will unsnap the previous sustain. This means that it will set the position to write notes right after the previous note, rather than after the sustain of the previous note. This function is functionally identical to using a carat ^ after setting note properties of the previous note. Note The default behaviour of sustains is to snap to after it. Example 1 1{4}^2345 This will unsnap the sustain such that the next notes are placed directly after the green note."
+  },
+  "guides/unilang/zigzag/index.html": {
+    "href": "guides/unilang/zigzag/index.html",
+    "title": "Zig Zag | SideyBot Documentation",
+    "keywords": "Zig Zag Aliases ZIGZAG , ZAGZIG , ZIGZIG , ZAGZAG , ZIG , ZAG , Z Overview The Zig function is very similar to the Arpeggiator function in that it loops through notes. However, the main difference to the Arpeggiator function is that it will repeat in both directions. It will go to the end then back. Tip The funciton will go back and forth but will exclude the final note. So 1234 -> 123432 (notice how there is no green note at the end.) Arguments Name Type Description Pattern string The pattern to zig-zag. Count (optional) integer How many times to repeat it. Default is 1. Example 1 ZIG(123412345, 2) Will zig each note in the pattern \"123412345\" twice. Warning Currently this function is only partially implemented. So it wont be able to zig-zag everything like expected; quantizations currently don't work within a Zig Zag function. Full functionality is planned for a later release."
+  },
+  "guides/utility/bpm/index.html": {
+    "href": "guides/utility/bpm/index.html",
+    "title": "BPM | SideyBot Documentation",
+    "keywords": "BPM Overview The BPM command will find the BPM required for a certain NPS at a given step/quantization. Arguments Name Type Options Description NPS Float N/A The NPS you want. Step Float N/A The Step you want that Nps at. Usage Example /bpm nps: 20 step: 32 This will find the BPM required for 20 NPS at 1/32nd step: 150"
+  },
+  "guides/utility/diceroll/index.html": {
+    "href": "guides/utility/diceroll/index.html",
+    "title": "Dice Roll | SideyBot Documentation",
+    "keywords": "Dice Roll Overview The Dice Roll command will roll a dice with the given amount of faces. Arguments Name Type Options Description Faces (optional) integer N/A The amount of faces on your dice. Default is 6, and cannot be lower than 2. Usage Example /diceroll faces: 8 This will roll a dice with 8 faces and give you the result."
+  },
+  "guides/utility/headsortails/index.html": {
+    "href": "guides/utility/headsortails/index.html",
+    "title": "Heads or Tails | SideyBot Documentation",
+    "keywords": "Heads or Tails Overview The Heads or Tails command will do a coin flip. Usage Example /headsortails This will give you either Heads, or Tails."
+  },
+  "guides/utility/index.html": {
+    "href": "guides/utility/index.html",
+    "title": "Utility | SideyBot Documentation",
+    "keywords": "Utility Overview The Utility module contains utility commands that don't fit into either images or text commands."
+  },
+  "guides/utility/nps/index.html": {
+    "href": "guides/utility/nps/index.html",
+    "title": "NPS | SideyBot Documentation",
+    "keywords": "NPS Overview The Nps command will find the NPS for a given BPM, Step and Speed. Arguments Name Type Options Description BPM Float N/A The BPM you want. Step Float N/A The Step you want that NPS at. Speed (optional) Float N/A The Speed you want. Usage Example /nps bpm: 150 step: 32 speed: 110 This will find the NPS if you have notes at 150 BPM, 1/32nd notes at 110% speed. 22"
+  },
+  "index.html": {
+    "href": "index.html",
+    "title": "Welcome to SideyBot | SideyBot Documentation",
+    "keywords": "Welcome to SideyBot This site contains the official documentation pages for SideyBot ( pronounced: Side-e Bot ), a Discord bot developed by Sidney600 and RileyTheFox. This Discord bot is made specifically with Guitar Hero/Clone Hero in mind. The SideyBot Discord Bot and its Documentation are split up into Modules. Each module contains a subset of commands that relate to that module. Bot Invite You can invite SideyBot to your own Discord server by clicking here . Module Overview Chart Contains commands that deals with charts. See the Chart module. Client Contains commands to maniplate and get data about the bot itself as well as the server. See the Client module. Image Contains commands to manipulate images and create image related memes. See the Image modules. Miscellaneous Contains commands that don't fit well into any other category. See the Miscellaneous module. Text Contains commands to manipulate text and create text based memes. See the Text modules. Utility Contains utility commands for various tasks. See the Utility module. Other features Unilang Unilang is a scripting language designed for Unison. It contains ways to write scripts in order to generate charts. To see more about it see the Unilang section."
+  }
+}

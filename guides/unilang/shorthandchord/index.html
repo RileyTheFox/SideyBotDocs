@@ -1,0 +1,277 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Shorthand Chord | SideyBot Documentation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Shorthand Chord | SideyBot Documentation ">
+    <meta name="generator" content="docfx 2.59.3.0">
+    
+    <link rel="shortcut icon" href="../../../favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    
+    <meta property="docfx:rel" content="../../../">
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Guides.Unilang.ShorthandChord">
+<h1 id="shorthand-chord">Shorthand Chord</h1>
+
+<h3 id="aliases">Aliases</h3>
+<p><code>SHORTHAND_CHORD</code>, <code>SHORTCHORD</code>, <code>SC</code></p>
+<h2 id="overview">Overview</h2>
+<p>The Shorthand Chord function takes letters as input and turns them into chords.</p>
+<div class="NOTE">
+<h5>Note</h5>
+<p>Not to be confused with the <a class="xref" href="../letters/index.html">Letters</a> function.</p>
+</div>
+<p>This function is functionally identical to using <code>.</code> followed by a character.</p>
+<p>This function is quite handy if you need to write shorter Unilang code.</p>
+<h2 id="arguments">Arguments</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ChordLetters</td>
+<td>string</td>
+<td>The shorthand chord letters.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="list-of-chords">List of Chords</h2>
+<p>Here is a list of what letters map to each chord. The rule is that the top note will change first.</p>
+<table>
+<thead>
+<tr>
+<th>One note</th>
+<th>Two note chords</th>
+<th>Three note chords</th>
+<th>Four note chords</th>
+<th>Five note chords</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>0</code> -&gt; <code>[0]</code></td>
+<td><code>a</code> -&gt; <img src="chord_a.png" alt="[12]" style="width:196px;"></td>
+<td><code>k</code> -&gt; <img src="chord_k.png" alt="[123]" style="width:196px;"></td>
+<td><code>u</code> -&gt; <img src="chord_u.png" alt="[1234]" style="width:196px;"></td>
+<td><code>z</code> -&gt; <img src="chord_z.png" alt="[12345]" style="width:196px;"></td>
+</tr>
+<tr>
+<td><code>1</code> -&gt; <code>[1]</code></td>
+<td><code>b</code> -&gt; <img src="chord_b.png" alt="[13]" style="width:196px;"></td>
+<td><code>l</code> -&gt; <img src="chord_l.png" alt="[124]" style="width:196px;"></td>
+<td><code>v</code> -&gt; <img src="chord_v.png" alt="[1235]" style="width:196px;"></td>
+<td></td>
+</tr>
+<tr>
+<td><code>2</code> -&gt; <code>[2]</code></td>
+<td><code>c</code> -&gt; <img src="chord_c.png" alt="[14]" style="width:196px;"></td>
+<td><code>m</code> -&gt; <img src="chord_m.png" alt="[125]" style="width:196px;"></td>
+<td><code>w</code> -&gt; <img src="chord_w.png" alt="[1245]" style="width:196px;"></td>
+<td></td>
+</tr>
+<tr>
+<td><code>3</code> -&gt; <code>[3]</code></td>
+<td><code>d</code> -&gt; <img src="chord_d.png" alt="[15]" style="width:196px;"></td>
+<td><code>n</code> -&gt; <img src="chord_n.png" alt="[134]" style="width:196px;"></td>
+<td><code>x</code> -&gt; <img src="chord_x.png" alt="[1345]" style="width:196px;"></td>
+<td></td>
+</tr>
+<tr>
+<td><code>4</code> -&gt; <code>[4]</code></td>
+<td><code>e</code> -&gt; <img src="chord_e.png" alt="[23]" style="width:196px;"></td>
+<td><code>o</code> -&gt; <img src="chord_o.png" alt="[135]" style="width:196px;"></td>
+<td><code>y</code> -&gt; <img src="chord_y.png" alt="[2345]" style="width:196px;"></td>
+<td></td>
+</tr>
+<tr>
+<td><code>5</code> -&gt; <code>[5]</code></td>
+<td><code>f</code> -&gt; <img src="chord_f.png" alt="[24]" style="width:196px;"></td>
+<td><code>p</code> -&gt; <img src="chord_p.png" alt="[145]" style="width:196px;"></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>6</code> -&gt; <code>[6]</code></td>
+<td><code>g</code> -&gt; <img src="chord_g.png" alt="[25]" style="width:196px;"></td>
+<td><code>q</code> -&gt; <img src="chord_q.png" alt="[234]" style="width:196px;"></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>7</code> -&gt; <code>[7]</code></td>
+<td><code>h</code> -&gt; <img src="chord_h.png" alt="[34]" style="width:196px;"></td>
+<td><code>r</code> -&gt; <img src="chord_r.png" alt="[235]" style="width:196px;"></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>8</code> -&gt; <code>[8]</code></td>
+<td><code>i</code> -&gt; <img src="chord_i.png" alt="[35]" style="width:196px;"></td>
+<td><code>s</code> -&gt; <img src="chord_s.png" alt="[245]" style="width:196px;"></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>9</code> -&gt; <code>[9]</code></td>
+<td><code>j</code> -&gt; <img src="chord_j.png" alt="[45]" style="width:196px;"></td>
+<td><code>t</code> -&gt; <img src="chord_t.png" alt="[345]" style="width:196px;"></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="example-1">Example 1</h4>
+<pre><code class="lang-css">SC(abcd)
+</code></pre>
+<p>Places the shorthand chords corresponding to the letters <code>a</code>, <code>b</code>, <code>c</code>, <code>d</code>, being <code>[12]</code>, <code>[13]</code>, <code>[14]</code>, <code>[15]</code>.</p>
+<img src="example1.png" alt="Shorthand Chord Example 1" style="width:245px;">
+<h2 id="using-period--characters">Using Period . Characters</h2>
+<p>You can write <code>.</code> followed by one of the chord letters above to achieve the same as <code>SHORTHAND_CHORD()</code> with one letter input.</p>
+<h4 id="example-2">Example 2</h4>
+<pre><code class="lang-css">.a.e.h.j
+</code></pre>
+<p>Places the shorthand chords corresponding to the letters <code>a</code>, <code>e</code>, <code>h</code>, <code>j</code>, being <code>[12]</code>, <code>[23]</code>, <code>[34]</code>, <code>[45]</code>.</p>
+<img src="example2.png" alt="Shorthand Chord Example 2" style="width:245px;">
+<div class="TIP">
+<h5>Tip</h5>
+<p>Any chord is shorter to write using <code>.</code> notation. However, using it does come at the cost of readability.</p>
+</div>
+<div class="TIP">
+<h5>Tip</h5>
+<p>If you have more than 4 short hand chords, <code>SC(input)</code> notation becomes shorter than using <code>.</code> notation.</p>
+</div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <div class="toggle-mode">
+                <div class="icon">
+                  <i aria-hidden="true">☀</i>
+                </div>
+                <label class="switch">
+                  <input type="checkbox" id="switch-style">
+                  <span class="slider round"></span>
+                </label>
+                <div class="icon">
+                  <i aria-hidden="true">☾</i>
+                </div>
+              </div>
+          
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <h5>In This Article</h5>
+              <div></div>
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <div class="pull-left">
+              SideyBot by Sidney600 and RileyTheFox
+              
+            </div>
+            <div class="toggle-mode pull-right visible-sm visible-xs">
+              <div class="icon">
+                <i aria-hidden="true">☀</i>
+              </div>
+              <label class="switch">
+                <input type="checkbox" id="switch-style-m">
+                <span class="slider round"></span>
+              </label>
+              <div class="icon">
+                <i aria-hidden="true">☾</i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <script type="text/javascript" src="../../../styles/toggle-theme.js"></script>
+      </footer>    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>
